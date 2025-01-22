@@ -53,7 +53,7 @@ def train_model(dataset_path,
     print(f"Training completed. Model saved to {save_name}.pt")
 
 d = {'epochs': 50, 'batch_size': 16, 'img_size': 640, 'device': 'cpu', 'seed': 0}
-train_model(dataset_path="coco128-seg.yaml", hyperparameters= d, save_path = '/Users/pierreliboureau/Downloads/mltest', save_name = "?", model_architecture = "yolo11n-seg")
+train_model(dataset_path="coco8-seg.yaml", hyperparameters= d, save_path = '/Users/pierreliboureau/Downloads/mltest', save_name = "?", model_architecture = "yolo11n-seg")
 
 # model = YOLO('yolo11n-seg')
 #
