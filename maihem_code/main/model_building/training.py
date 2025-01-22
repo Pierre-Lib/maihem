@@ -29,7 +29,8 @@ def train_model(dataset_path,
 
     Returns
     -------
-    None, model is directly saved in directory.
+    Model metrics: ultralytics.utils.metrics.SegmentMetrics
+        Model metrics - only for unit testing purposes, model is saved automatically for further use
     """
 
     #Set model name to default if none has been specified
@@ -38,7 +39,6 @@ def train_model(dataset_path,
 
     #Initialise YOLO model
     model = YOLO(model_architecture)
-
     #Train the model
     model.train(data = dataset_path,
                 epochs = hyperparameters['epochs'],
@@ -51,10 +51,4 @@ def train_model(dataset_path,
                 )
 
     print(f"Training completed. Model saved to {save_name}.pt")
-
-d = {'epochs': 50, 'batch_size': 16, 'img_size': 640, 'device': 'cpu', 'seed': 0}
-train_model(dataset_path="coco8-seg.yaml", hyperparameters= d, save_path = '/Users/pierreliboureau/Downloads/mltest', save_name = "?", model_architecture = "yolo11n-seg")
-
-# model = YOLO('yolo11n-seg')
-#
-# model.train(data = 'coco8-seg.yaml', seed = 0)
+    return model.metrics
