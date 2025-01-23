@@ -1,13 +1,18 @@
+"""Tests for detection functions"""
 import unittest
 
 from maihem_code.main.model_usage.detections import detection_segmentation
 
 class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        test_detection = detection_segmentation(model_path = '../model_building_tests/test_model/weights/best.pt',
-                                                image_path = 'test_img.jpg',
-                                                save_path = './test_predictions',
-                                                conf_threshold = 0.25)
+    """Class to test detection functions"""
+    def test_detections(self):
+        """tests that the class and one of the coordinates of a test detection are as expected"""
+        test_detection = detection_segmentation(
+            model_path = '../model_building_tests/test_model/weights/best.pt',
+            image_path = '../test_img.jpg',
+            save_path = './test_predictions',
+            conf_threshold = 0.25
+        )
         detection = test_detection[0]
         box = detection.boxes[0]
         class_id = int(box.cls)
