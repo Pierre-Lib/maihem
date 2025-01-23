@@ -1,6 +1,6 @@
 """A function which uses the trained model to detect objects in a new image
-and creates a file with segmentation data for further quantitative analysis
-"""
+and creates a file with segmentation data for further quantitative analysis"""
+
 import json
 
 from ultralytics import YOLO

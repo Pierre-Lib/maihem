@@ -1,4 +1,4 @@
-""""A function to obtain validation metrics for the trained model"""
+"""A function to obtain validation metrics for the trained model"""
 
 from ultralytics import YOLO
 

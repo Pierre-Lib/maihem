@@ -1,9 +1,9 @@
-"""A class which takes raw segmentation results and calculates various metrics"""
+"""A class which takes raw segmentation results and calculates various measures"""
 import yaml
 import cv2
 import numpy
 
-class MetricsCalculations:
+class MeasuresCalculations:
     """
     A class using raw segmentation results from a YOLO11 model to calculate
     the number and area of segmentations, and create heatmaps for them.
@@ -137,6 +137,8 @@ class MetricsCalculations:
         """
         Parameters
         ----------
+        class_names : dict
+            A dictionary mapping class IDs and class names
         specific_class_name : str
             The name of the class for which to calculate the total area
 

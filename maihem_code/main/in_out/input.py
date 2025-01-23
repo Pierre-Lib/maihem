@@ -7,8 +7,6 @@ class Input:
     ...
     Attributes
     ----------
-    model_path: str
-        The path to save the model for training and later find the model for validation and use
 
     Methods
     -------

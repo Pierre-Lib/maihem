@@ -2,7 +2,7 @@ import unittest
 import cv2
 
 from maihem_code.main.model_usage.detections import detection_segmentation
-from maihem_code.main.model_usage.metrics_calculations import MetricsCalculations
+from maihem_code.main.model_usage.measures_calculations import MetricsCalculations
 
 sample_detections = detection_segmentation(model_path = '../model_building_tests/test_model/weights/best.pt',
                                         image_path = 'test_img.jpg',
