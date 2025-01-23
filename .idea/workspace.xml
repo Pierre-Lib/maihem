@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="new_package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/bin_tests/maihem_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/bin_tests/maihem_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/in_out_tests/input_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/in_out_tests/input_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/in_out_tests/output_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/in_out_tests/output_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/training_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/training_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/validation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/validation_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_usage_tests/detections_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_usage_tests/detections_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/yolo11n-seg.pt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +84,7 @@
       <workItem from="1737541316400" duration="10164000" />
       <workItem from="1737552632301" duration="16006000" />
       <workItem from="1737627868704" duration="5000" />
-      <workItem from="1737627884541" duration="4387000" />
+      <workItem from="1737627884541" duration="5695000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -147,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737629815670</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="new_package">
+      <option name="closed" value="true" />
+      <created>1737638854048</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1737638854048</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +162,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maihem$training.coverage" NAME="training Coverage Results" MODIFIED="1737567067157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_building" />
-    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1737637790055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/tests/model_building_tests" />
+    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1737639048347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/tests/bin_tests" />
   </component>
 </project>
