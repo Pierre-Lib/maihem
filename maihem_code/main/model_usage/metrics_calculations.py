@@ -41,7 +41,8 @@ class MetricsCalculations:
         """
         self.detections = detections
 
-    def get_class_names(self, yaml_file_path):
+    @staticmethod
+    def get_class_names(yaml_file_path):
         """
         Parameters
         ----------
@@ -58,7 +59,8 @@ class MetricsCalculations:
         class_names = data.get('names', {})
         return class_names
 
-    def get_specific_class_id(self, class_names, specific_class_name):
+    @staticmethod
+    def get_specific_class_id(class_names, specific_class_name):
         """
         Parameters
         ----------
@@ -76,7 +78,8 @@ class MetricsCalculations:
         return class_id
 
 
-    def calculate_area(self, mask, image_dimensions, pixel_size):
+    @staticmethod
+    def calculate_area(mask, image_dimensions, pixel_size):
         """
         Parameters
         ----------
@@ -123,14 +126,14 @@ class MetricsCalculations:
             image = cv2.imread(image_path)
             image_dimensions = image.shape
             total_class_area = 0
-            for box, mask in zip(detection.boxes, detection.masks):
+            for box, mask in zip(detection.boxes, detection.masks.data):
                 if int(box.cls) == class_id:
                     mask_area = self.calculate_area(mask, image_dimensions, pixel_size = pixel_size)
                     total_class_area += mask_area
             class_area_dict[image_name] = total_class_area
         return class_area_dict
 
-    def total_number_of_occurrences(self, specific_class_name):
+    def total_number_of_occurrences(self, class_names, specific_class_name):
         """
         Parameters
         ----------
@@ -145,7 +148,7 @@ class MetricsCalculations:
         """
         class_number_dict = {}
         for detection in self.detections:
-            class_id = self.get_specific_class_id(detection, specific_class_name)
+            class_id = self.get_specific_class_id(class_names, specific_class_name)
             image_name = detection.path.split('/')[-1]
             total_number_of_occurrences = 0
             for box in detection.boxes:

@@ -26,6 +26,9 @@ def model_training_and_validation(dataset_path,
                                                 image_size = image_size,
                                                 device = device,
                                                 seed = seed)
+    #Set model name to default if none has been specified
+    if model_name is None:
+        model_name = f'my_new_{model_architecture}_model'
 
     print(f"Commencing model training for {epochs} epochs")
     train_model(dataset_path = dataset_path,
@@ -58,12 +61,14 @@ def detections_and_calculations(model_path,
 
     metrics_calculator = MetricsCalculations(detections)
     class_names = metrics_calculator.get_class_names(yaml_file_path)
+    complete_metrics_dict = {}
     for lesion in lesion_names:
-        lesion_count = metrics_calculator.total_number_of_occurrences(lesion)
+        lesion_count = metrics_calculator.total_number_of_occurrences(class_names, lesion)
         total_lesion_area = metrics_calculator.sum_areas_of_class(class_names, lesion, pixel_size)
         lesion_metrics = merge_detection_metrics(lesion_count, total_lesion_area)
+        complete_metrics_dict[lesion] = lesion_metrics
 
-        with open(f'{output_path}/{lesion}.json', 'w', encoding = 'utf-8') as outfile:
-            json.dump(lesion_metrics, outfile)
+    with open(f'{output_path}/detection.json', 'w', encoding = 'utf-8') as outfile:
+        json.dump(complete_metrics_dict, outfile)
 
-
+    return complete_metrics_dict

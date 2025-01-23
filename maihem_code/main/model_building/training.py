@@ -33,10 +33,6 @@ def train_model(dataset_path,
         Model metrics - only for unit testing purposes, model is saved automatically for further use
     """
 
-    #Set model name to default if none has been specified
-    if save_name is None:
-        save_name = f'my_new_{model_architecture}_model'
-
     #Initialise YOLO model
     model = YOLO(model_architecture)
     #Train the model
