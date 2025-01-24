@@ -1,0 +1,4 @@
+cats_dogs_1.jpg: https://www.pickpik.com/animals-dogs-cat-play-young-animals-puppy-903
+cats_dogs_2.jpg: https://www.pexels.com/photo/dogs-and-a-cat-lying-on-a-cushion-7329892/
+cats_dogs_3.jpg: https://www.goodfon.com/animals/wallpaper-sobaka-koshki-druzya.html
+not_cats_dogs.jpg: https://www.stockvault.net/photo/233620/wild-moose
