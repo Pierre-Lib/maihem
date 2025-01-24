@@ -127,7 +127,7 @@ def detections_and_calculations(model_path,
         lesion_measures = merge_detection_measures(lesion_count, total_lesion_area)
         complete_measures_dict[lesion] = lesion_measures
 
-    with open(f'{output_path}/measures.json', 'w', encoding = 'utf-8') as outfile:
+    with open(f'{output_path}/predict/measures.json', 'w', encoding = 'utf-8') as outfile:
         json.dump(complete_measures_dict, outfile)
 
     return complete_measures_dict

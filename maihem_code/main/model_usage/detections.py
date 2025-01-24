@@ -55,7 +55,7 @@ def detection_segmentation(model_path, image_path, save_path, conf_threshold):
             }
             detection_data.append(detection)
 
-    with open(f'{save_path}/detections.json', 'w', encoding = 'utf-8') as outfile:
+    with open(f'{save_path}/predict/detections.json', 'w', encoding = 'utf-8') as outfile:
         json.dump(detection_data, outfile, indent = 4)
 
     return results
