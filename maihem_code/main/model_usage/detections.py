@@ -36,6 +36,14 @@ def detection_segmentation(model_path, image_path, save_path, conf_threshold):
     detection_data = []
     for result in results:
         image_path = result.path
+        if len(result.boxes.cls) == 0:
+            print(f"No detections in image {image_path}")
+            detection = {
+                'image_path': image_path,
+                'class_id' : 'None'
+            }
+            detection_data.append(detection)
+            continue
         for box, mask in zip(result.boxes, result.masks):
             class_id = int(box.cls)
             bbox = box.xyxy.cpu().numpy() if hasattr(box.xyxy, 'cpu') else box.xyxy
@@ -52,7 +60,7 @@ def detection_segmentation(model_path, image_path, save_path, conf_threshold):
                     int(bbox[3])
                 ],
                 'segmentation': mask_array
-            }
+                }
             detection_data.append(detection)
 
     with open(f'{save_path}/predict/detections.json', 'w', encoding = 'utf-8') as outfile:

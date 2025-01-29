@@ -124,6 +124,9 @@ class MeasuresCalculations:
             image = cv2.imread(image_path)
             image_dimensions = image.shape
             total_class_area = 0
+            if len(detection.boxes.cls) == 0:
+                class_area_dict[image_name] = total_class_area
+                continue
             for box, mask in zip(detection.boxes, detection.masks.data):
                 if int(box.cls) == class_id:
                     mask_area = self.calculate_area(mask, image_dimensions, pixel_size = pixel_size)

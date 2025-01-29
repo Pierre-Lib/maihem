@@ -3,22 +3,25 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "maihem"
-version = "0.1.0"
+name = 'maihem'
+version = '0.1.0'
 description = "A package for YOLO-based segmentation and analysis"
-readme = "README.md"
-license = { text = "MIT"}
+readme = 'README.md'
+license = { text = 'MIT'}
 authors = [
-    {name = "Pierre Liboureau", email = "pierre.e.liboureau@uis.no"}
+    {name = 'Pierre Liboureau', email = 'pierre.e.liboureau@uis.no'}
 ]
-requires-python = ">=3.5"
+requires-python = '>=3.5, < 3.13'
 dependencies = [
-    "ultralytics",
-    "numpy",
-    "opencv-python",
+    'ultralytics',
+    'numpy',
+    'opencv-python',
 ]
-keywords = ["nothing", "yet"]
+keywords = ['nothing', 'yet']
 classifiers = []
 
 [project.urls]
-Homepage = "https://github.com/Pierre-Lib/maihem"
+Homepage = 'https://github.com/Pierre-Lib/maihem'
+
+[project.scripts]
+maihem-example = 'maihem_code.example:maihem_example'

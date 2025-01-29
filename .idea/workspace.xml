@@ -7,16 +7,46 @@
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="new_package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maihem_code/example/maihem_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/example/maihem_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/main/bin/maihem.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/bin/maihem.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/main/in_out/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/in_out/input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/main/model_building/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/model_building/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/main/model_building/validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/model_building/validation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/main/model_usage/detections.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/model_usage/detections.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/maihem_code/main/model_usage/measures_calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/model_usage/measures_calculations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/bin_tests/maihem_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/bin_tests/maihem_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/training_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/training_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/validation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/validation_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_usage_tests/detections_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_usage_tests/detections_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_usage_tests/metrics_calculations_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/tests/model_usage_tests/metrics_calculations_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxF1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxPR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxP_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskF1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskPR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskP_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxF1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxPR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxP_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskF1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskPR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskP_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,27 +85,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in detections_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in input_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in maihem_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in metrics_calculations_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in output_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in training_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in validation_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maihem_example.executor&quot;: &quot;Run&quot;,
-    &quot;Python.training.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in detections_test.py.executor": "Run",
+    "Python tests.Python tests in input_test.py.executor": "Run",
+    "Python tests.Python tests in maihem_test.py.executor": "Run",
+    "Python tests.Python tests in metrics_calculations_test.py.executor": "Run",
+    "Python tests.Python tests in output_test.py.executor": "Run",
+    "Python tests.Python tests in training_test.py.executor": "Run",
+    "Python tests.Python tests in validation_test.py.executor": "Run",
+    "Python.detections.executor": "Run",
+    "Python.maihem_example.executor": "Run",
+    "Python.training.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -96,7 +127,7 @@
       <workItem from="1737552632301" duration="16006000" />
       <workItem from="1737627868704" duration="5000" />
       <workItem from="1737627884541" duration="16911000" />
-      <workItem from="1738135757774" duration="2362000" />
+      <workItem from="1738135757774" duration="10304000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -194,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737721148359</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="new_package">
+      <option name="closed" value="true" />
+      <created>1738140925063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1738140925063</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,7 +245,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maihem$training.coverage" NAME="training Coverage Results" MODIFIED="1737567067157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_building" />
-    <SUITE FILE_PATH="coverage/maihem$maihem_example.coverage" NAME="maihem_example Coverage Results" MODIFIED="1737720803686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/example" />
-    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1737723661079" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/tests/bin_tests" />
+    <SUITE FILE_PATH="coverage/maihem$maihem_example.coverage" NAME="maihem_example Coverage Results" MODIFIED="1738149105439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/example" />
+    <SUITE FILE_PATH="coverage/maihem$detections.coverage" NAME="detections Coverage Results" MODIFIED="1738146759475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_usage" />
+    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1738147176820" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/tests/model_usage_tests" />
   </component>
 </project>
