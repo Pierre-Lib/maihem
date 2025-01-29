@@ -1,0 +1,8 @@
+
+*pyc
+*log
+
+.idea/
+maihem.egg-info/
+build/
+**/__pycache__/

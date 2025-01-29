@@ -14,7 +14,7 @@ authors = [
 requires-python = '>=3.5, < 3.13'
 dependencies = [
     'ultralytics',
-    'numpy',
+    'numpy<2',
     'opencv-python',
 ]
 keywords = ['nothing', 'yet']
@@ -24,4 +24,7 @@ classifiers = []
 Homepage = 'https://github.com/Pierre-Lib/maihem'
 
 [project.scripts]
-maihem-example = 'maihem_code.example:maihem_example'
+maihem-example = 'maihem.example:maihem_example'
+
+[project.gui-scripts]
+maihem = 'maihem.bin.maihem:entry_point'
