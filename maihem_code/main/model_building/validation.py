@@ -22,8 +22,6 @@ def validate_model(model_path, save_path, save_name):
         Dictionary of validation metrics including mean average precision (mAP)
         for both boxes and segmentation at various intersection over union (IoU)
         thresholds.
-    -------
-
     """
 
     model = YOLO(model_path)

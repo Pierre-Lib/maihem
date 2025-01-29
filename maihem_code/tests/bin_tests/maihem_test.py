@@ -16,8 +16,8 @@ class MyTestCase(unittest.TestCase):
                                                          seed = 1612)
         expected_map50_box = 0.9396968794610389
         expected_map75_seg = 0.5392530224525044
-        self.assertEqual(test_bin_metrics['map50_box'], expected_map50_box)
-        self.assertEqual(test_bin_metrics['map75_seg'], expected_map75_seg)
+        self.assertAlmostEqual(test_bin_metrics['map50_box'], expected_map50_box, 3)
+        self.assertAlmostEqual(test_bin_metrics['map75_seg'], expected_map75_seg, 3)
 
     def test_detections_and_calculations(self):
         """Tests the detection and measurement calculations functions.

@@ -14,10 +14,10 @@ example_calculations = detections_and_calculations(model_path = 'maihem_code/exa
                                                    output_path = 'maihem_code/example',
                                                    lesion_names = ['dog', 'cat'])
 
-print(f'Images with overlayed detections are saved in maihem_code/example/predict.\n'
-      f'Detections data are saved in maihem_code/example/predict/detections.json')
-print(f'The number of dogs and cats, and the total area for each in the test images are as follows:\n')
-print(f'Dogs: {example_calculations['dog']}\nCats: {example_calculations['cat']}')
-print(f'These measures are also saved in maihem_code/example/predict/measures.json')
+print(f"Images with overlayed detections are saved in maihem_code/example/predict.\n"
+      f"Detections data are saved in maihem_code/example/predict/detections.json")
+print(f"The number of dogs and cats, and the total area for each in the test images are as follows:\n")
+print(f"Dogs: {example_calculations['dog']}\nCats: {example_calculations['cat']}")
+print(f"These measures are also saved in maihem_code/example/predict/measures.json")
 
 

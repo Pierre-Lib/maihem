@@ -28,8 +28,6 @@ class MeasuresCalculations:
         Calculates the total area of all detections of a specific class in each image
     total_number_of_occurrences:
         Calculates the total number of detections of a specific class in each image
-    -------
-
     """
 
     def __init__(self, detections):

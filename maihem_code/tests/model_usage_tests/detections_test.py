@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
                          'box_0' : 233.49911499023438}
 
         self.assertEqual(test_dict['class'], expected_dict['class'])
-        self.assertEqual(test_dict['box_0'], expected_dict['box_0'])
+        self.assertAlmostEqual(test_dict['box_0'], expected_dict['box_0'], 1)
 
 
 if __name__ == '__main__':

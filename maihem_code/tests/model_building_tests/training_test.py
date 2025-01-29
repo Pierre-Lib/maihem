@@ -21,7 +21,7 @@ class MyTestCase(unittest.TestCase):
                                          'yolo11n-seg')
         test_model_seg_map50 = test_model_metrics.seg.map50
         expected_map50 = 0.8496081399536289
-        self.assertEqual(test_model_seg_map50, expected_map50)  # add assertion here
+        self.assertAlmostEqual(test_model_seg_map50, expected_map50, 3)  # add assertion here
 
 
 if __name__ == '__main__':

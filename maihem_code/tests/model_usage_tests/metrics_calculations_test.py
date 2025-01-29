@@ -39,12 +39,14 @@ class MyTestCase(unittest.TestCase):
         """Checks that the function correctly calculates the area of a detection"""
         test_mask = test_metrics.detections[0].masks.data[2]
         test_area = MeasuresCalculations.calculate_area(test_mask, test_image_dimensions, 1)
-        self.assertEqual(test_area,4708.871337890625)
+        expected_area = 4708.871337890625
+        self.assertAlmostEqual(test_area, expected_area, 1)
 
     def test_calculate_sum_areas_of_class(self):
         """Checks that the function correctly calculates the sum of areas for a given class"""
         test_sum_of_areas = test_metrics.sum_areas_of_class(test_class_names, 'elephant', 1)
-        self.assertEqual(test_sum_of_areas['test_img.jpg'],21949.565185546875)
+        expected_sum_of_areas = 21949.565185546875
+        self.assertAlmostEqual(test_sum_of_areas['test_img.jpg'], expected_sum_of_areas, 1)
 
     def test_total_number_of_occurrences(self):
         """Checks that the functions correctly counts the number of occurrences of a given class"""

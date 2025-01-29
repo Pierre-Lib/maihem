@@ -1,4 +1,5 @@
 """A function training a YOLO11 segmentation model """
+
 from ultralytics import YOLO
 
 def train_model(dataset_path,

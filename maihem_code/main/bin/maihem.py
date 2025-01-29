@@ -19,7 +19,7 @@ def model_training_and_validation(dataset_path,
                                   image_size = 640,
                                   device = 'cpu',
                                   seed = random.randint(0, 1000),
-                                  validation_name = "validation"
+                                  validation_name = 'validation'
                                   ):
     """A function to train a model, save it, run a validation and output validation metrics.
 
@@ -128,6 +128,6 @@ def detections_and_calculations(model_path,
         complete_measures_dict[lesion] = lesion_measures
 
     with open(f'{output_path}/predict/measures.json', 'w', encoding = 'utf-8') as outfile:
-        json.dump(complete_measures_dict, outfile)
+        json.dump(complete_measures_dict, outfile, indent = 4)
 
     return complete_measures_dict

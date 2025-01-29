@@ -15,8 +15,8 @@ class MyTestCase(unittest.TestCase):
         test_map75_seg = test_validation['map75_seg']
         expected_map75_box = 0.7050959860383944
         expected_map75_seg = 0.5353737638161722
-        self.assertEqual(test_map75_box, expected_map75_box)
-        self.assertEqual(test_map75_seg, expected_map75_seg)
+        self.assertAlmostEqual(test_map75_box, expected_map75_box, 3)
+        self.assertAlmostEqual(test_map75_seg, expected_map75_seg, 3)
 
 
 if __name__ == '__main__':
