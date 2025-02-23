@@ -6,47 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="new_package">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/example/maihem_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/example/maihem_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/main/model_usage/detections.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/model_usage/detections.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/main/model_usage/measures_calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/main/model_usage/measures_calculations.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/Validation/test_validation/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/train_batch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/weights/best.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem_code/tests/model_building_tests/test_model/weights/last.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,12 +29,12 @@
     &quot;assignee&quot;: &quot;Pierre-Lib&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Pierre-Lib/maihem&quot;,
-    &quot;accountId&quot;: &quot;8ed79c02-4a6e-434f-9bd9-09e4fbb26e76&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Pierre-Lib/maihem.git",
+    "accountId": "8ed79c02-4a6e-434f-9bd9-09e4fbb26e76"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -85,28 +44,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in detections_test.py.executor": "Run",
-    "Python tests.Python tests in input_test.py.executor": "Run",
-    "Python tests.Python tests in maihem_test.py.executor": "Run",
-    "Python tests.Python tests in metrics_calculations_test.py.executor": "Run",
-    "Python tests.Python tests in output_test.py.executor": "Run",
-    "Python tests.Python tests in training_test.py.executor": "Run",
-    "Python tests.Python tests in validation_test.py.executor": "Run",
-    "Python.detections.executor": "Run",
-    "Python.maihem_example.executor": "Run",
-    "Python.training.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in detections_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in input_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in maihem_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in metrics_calculations_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in output_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in training_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in validation_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detections.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maihem_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.training.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -128,6 +87,8 @@
       <workItem from="1737627868704" duration="5000" />
       <workItem from="1737627884541" duration="16911000" />
       <workItem from="1738135757774" duration="10304000" />
+      <workItem from="1738839497910" duration="1554000" />
+      <workItem from="1739282386886" duration="450000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
