@@ -24,7 +24,7 @@ class MyTestCase(unittest.TestCase):
               "save_validation" : True
             },
             "hyperparameters" : {
-              "epochs" : 100,
+              "epochs" : 10,
               "image_size" : 640,
               "device" : "cpu",
               "seed" : 16
@@ -69,7 +69,7 @@ class MyTestCase(unittest.TestCase):
               "save_validation" : True
             },
             "hyperparameters" : {
-              "epochs" : 100,
+              "epochs" : 10,
               "batch_size" : 16,
               "image_size" : 640,
               "device" : "cpu",

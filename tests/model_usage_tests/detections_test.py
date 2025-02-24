@@ -1,16 +1,21 @@
 """Tests for detection functions"""
 import unittest
+from pathlib import Path
 
-from maihem_code.main.model_usage.detections import detection_segmentation
+from maihem.model_usage_tools.detections import detection_segmentation
+
+TESTS_DIR = Path(__file__).parent.parent
+THIS_DIR = Path(__file__).parent
+MODEL_PATH = TESTS_DIR / 'model_building_tests' / 'model_for_tests' / 'weights'
 
 class MyTestCase(unittest.TestCase):
     """Class to test detection functions"""
     def test_detections(self):
         """tests that the class and one of the coordinates of a test detection are as expected"""
         test_detection = detection_segmentation(
-            model_path = '../model_building_tests/test_model/weights/best.pt',
-            image_path = '../test_img.jpg',
-            save_path = './test_predictions',
+            model_path = MODEL_PATH / 'best.pt',
+            image_path = TESTS_DIR / 'test_img.jpg',
+            save_path = THIS_DIR / 'test_predictions',
             conf_threshold = 0.25
         )
         detection = test_detection[0]
@@ -21,7 +26,7 @@ class MyTestCase(unittest.TestCase):
         test_dict = {'class' : class_id,
                      'box_0' : bbox_0}
         expected_dict = {'class' : 20,
-                         'box_0' : 233.49911499023438}
+                         'box_0' : 237.02441}
 
         self.assertEqual(test_dict['class'], expected_dict['class'])
         self.assertAlmostEqual(test_dict['box_0'], expected_dict['box_0'], 1)

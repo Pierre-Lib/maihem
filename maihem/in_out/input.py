@@ -64,8 +64,14 @@ class Input:
                                    }
         complete_training_instructions = dict()
         complete_training_instructions['dataset'] = train_instructions['dataset']
-        complete_training_instructions['settings'] = {key: train_instructions['settings'].get(key, default) for key, default in default_settings.items()}
-        complete_training_instructions['hyperparameters'] = {key: train_instructions['hyperparameters'].get(key, default) for key, default in default_hyperparameters.items()}
+        if 'settings' not in train_instructions:
+            complete_training_instructions['settings'] = default_settings
+        else:
+            complete_training_instructions['settings'] = {key: train_instructions['settings'].get(key, default) for key, default in default_settings.items()}
+        if 'hyperparameters' not in train_instructions:
+            complete_training_instructions['hyperparameters'] = default_hyperparameters
+        else:
+            complete_training_instructions['hyperparameters'] = {key: train_instructions['hyperparameters'].get(key, default) for key, default in default_hyperparameters.items()}
         return complete_training_instructions
 
 
@@ -83,9 +89,15 @@ class Input:
                               }
         complete_usage_instructions = dict()
         complete_usage_instructions['dataset'] = usage_instructions['dataset']
-        complete_usage_instructions['settings'] = {key: usage_instructions['settings'].get(key, default) for key, default in
-                                             default_settings.items()}
-        complete_usage_instructions['parameters'] = {key: usage_instructions['parameters'].get(key, default) for
-                                                    key, default in default_parameters.items()}
+        if 'settings' not in usage_instructions:
+            complete_usage_instructions['settings'] = default_settings
+        else:
+            complete_usage_instructions['settings'] = {key: usage_instructions['settings'].get(key, default) for key, default in
+                                                       default_settings.items()}
+        if 'parameters' not in usage_instructions:
+            complete_usage_instructions['parameters'] = default_parameters
+        else:
+            complete_usage_instructions['parameters'] = {key: usage_instructions['parameters'].get(key, default) for
+                                                         key, default in default_parameters.items()}
         return complete_usage_instructions
 

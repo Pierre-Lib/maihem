@@ -13,26 +13,6 @@ def model_training_and_validation(training_instructions):
 
     Parameters
     ----------
-    dataset_path : str
-        Location of the dataset .yaml file for training and validation
-    model_architecture : str
-        Type of YOLO11 segmentation model to be trained
-    model_path : str
-        Location to save the trained model
-    model_name : str
-        Name to give the trained model
-    epochs : int
-        Number of epochs to train the model
-    batch_size : int
-        Batch size for training
-    image_size : int
-        Size of images for training
-    device : str
-        Device to use for training
-    seed : int
-        Random seed for training
-    validation_name : str
-        Name to give the saved validation data
 
     Returns
     -------

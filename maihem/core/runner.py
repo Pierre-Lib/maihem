@@ -27,12 +27,12 @@ class Runner:
             self.instructions['Usage'] = False
 
     def plan_training(self):
-        if not self.instructions['Train']:
+        if self.instructions['Train']:
             self.instructions['Train'] = Input.format_training_instructions(self.instructions['Train'])
 
 
     def plan_usage(self):
-        if not self.instructions['Usage']:
+        if self.instructions['Usage']:
             self.instructions['Usage'] = Input.format_usage_instructions(self.instructions['Usage'])
 
     def execute_training(self):

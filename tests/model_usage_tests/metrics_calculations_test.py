@@ -2,21 +2,26 @@
 
 import unittest
 import cv2
+from pathlib import Path
 
-from maihem_code.main.model_usage.detections import detection_segmentation
-from maihem_code.main.model_usage.measures_calculations import MeasuresCalculations
+from maihem.model_usage_tools.detections import detection_segmentation
+from maihem.model_usage_tools.measures_calculations import MeasuresCalculations
+
+TESTS_DIR = Path(__file__).parent.parent
+THIS_DIR = Path(__file__).parent
+MODEL_PATH = TESTS_DIR / 'model_building_tests' / 'model_for_tests' / 'weights'
 
 sample_detections = detection_segmentation(
-    model_path = '../model_building_tests/test_model/weights/best.pt',
-    image_path = '../test_img.jpg',
-    save_path = './test_predictions',
+    model_path = MODEL_PATH / 'best.pt',
+    image_path = TESTS_DIR / 'test_img.jpg',
+    save_path = THIS_DIR / 'test_predictions',
     conf_threshold = 0.25
 )
 
 #prepare some data to be used by multiple tests
 test_metrics = MeasuresCalculations(sample_detections)
-test_class_names = MeasuresCalculations.get_class_names(yaml_file_path = '../coco8-seg_test.yaml')
-test_image = cv2.imread('../test_img.jpg')
+test_class_names = MeasuresCalculations.get_class_names(yaml_file_path = TESTS_DIR / 'coco8-seg_test.yaml')
+test_image = cv2.imread(TESTS_DIR / 'test_img.jpg')
 test_image_dimensions = test_image.shape
 
 class MyTestCase(unittest.TestCase):
@@ -39,13 +44,13 @@ class MyTestCase(unittest.TestCase):
         """Checks that the function correctly calculates the area of a detection"""
         test_mask = test_metrics.detections[0].masks.data[2]
         test_area = MeasuresCalculations.calculate_area(test_mask, test_image_dimensions, 1)
-        expected_area = 4708.871337890625
+        expected_area = 4723.0177001953125
         self.assertAlmostEqual(test_area, expected_area, 1)
 
     def test_calculate_sum_areas_of_class(self):
         """Checks that the function correctly calculates the sum of areas for a given class"""
         test_sum_of_areas = test_metrics.sum_areas_of_class(test_class_names, 'elephant', 1)
-        expected_sum_of_areas = 21949.565185546875
+        expected_sum_of_areas = 21756.364379882812
         self.assertAlmostEqual(test_sum_of_areas['test_img.jpg'], expected_sum_of_areas, 1)
 
     def test_total_number_of_occurrences(self):
