@@ -1,7 +1,7 @@
 """A class to take inputs and format them for use by the functions in the package"""
 
 import json
-import os
+from pathlib import Path
 import random
 import yaml
 import datetime
@@ -36,7 +36,7 @@ class Input:
 
     @staticmethod
     def check_path(filename):
-        if not os.path.exists(filename):
+        if not Path.exists(filename):
             raise ValueError(f"File {filename} does not exist!")
 
     @staticmethod
@@ -45,7 +45,7 @@ class Input:
             data = yaml.safe_load(file)
         class_names = data.get('names', {})
         for lesion in lesion_names:
-            if lesion not in class_names:
+            if lesion not in class_names.values():
                 raise ValueError(f"Lesion {lesion} does not exist!")
 
     @staticmethod
@@ -72,11 +72,14 @@ class Input:
 
     @staticmethod
     def format_usage_instructions(usage_instructions):
-        default_settings = {'output_path' : '.',
+        default_settings = {'model_path' : 'wrong_path',
+                            'yaml_path' : 'wrong_path',
+                            'output_path' : '.',
                             'save_output' : True
                             }
         default_parameters = {'confidence_threshold' : 0.5,
-                              'pixel_size' : 1
+                              'pixel_size' : 1,
+                              'lesion_names' : ['not right']
                               }
         complete_usage_instructions = dict()
         complete_usage_instructions['dataset'] = usage_instructions['dataset']

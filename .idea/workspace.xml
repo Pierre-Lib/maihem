@@ -5,21 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="new_package">
-      <change afterPath="$PROJECT_DIR$/maihem/bin/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maihem/bin/bin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maihem/core/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maihem/core/runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maihem/model_building_tools/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/maihem/model_usage_tools/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/core/maihem_core.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/backbone/backbone_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/in_out/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/in_out/input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/model_building/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/backbone/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/model_building/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/model_building_tools/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/model_building/validation.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/model_building_tools/validation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/model_usage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/backbone/run_functions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/model_usage/detections.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/model_usage_tools/detections.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/model_usage/measures_calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/model_usage_tools/measures_calculations.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +89,7 @@
       <workItem from="1738135757774" duration="10304000" />
       <workItem from="1738839497910" duration="1554000" />
       <workItem from="1739282386886" duration="450000" />
-      <workItem from="1740311467079" duration="18789000" />
+      <workItem from="1740311467079" duration="21550000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -217,7 +203,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740327040559</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="new_package">
+      <option name="closed" value="true" />
+      <created>1740396854742</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740396854742</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
