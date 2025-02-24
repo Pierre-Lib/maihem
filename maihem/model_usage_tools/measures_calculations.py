@@ -52,8 +52,8 @@ class MeasuresCalculations:
         class_names : dict
             A dictionary matching class IDs and class names
         """
-        with open(yaml_file_path, encoding = 'utf-8') as f:
-            data = yaml.safe_load(f)
+        with open(yaml_file_path, encoding = 'utf-8') as file:
+            data = yaml.safe_load(file)
         class_names = data.get('names', {})
         return class_names
 

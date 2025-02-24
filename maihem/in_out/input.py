@@ -1,5 +1,11 @@
 """A class to take inputs and format them for use by the functions in the package"""
 
+import json
+import os
+import random
+import yaml
+import datetime
+
 
 class Input:
     """A class that takes inputs and formats them for use in other functions
@@ -21,33 +27,62 @@ class Input:
         ----------
         """
 
+    @staticmethod
+    def parse_instructions_file(input_file):
+        with open(input_file, 'r', encoding = 'utf-8') as file:
+            instructions = json.load(file)
+
+        return instructions
 
     @staticmethod
-    def set_hyperparameters(epochs, batch_size, image_size, device, seed):
-        """
-        Parameters
-        ----------
-        epochs: int
-            The number of epochs to train the model
-        batch_size: int
-            The batch size for training
-        image_size: int
-            The size of the images used for training
-        device: str
-            The device on which to train the model
-        seed: int
-            The random seed for model training
+    def check_path(filename):
+        if not os.path.exists(filename):
+            raise ValueError(f"File {filename} does not exist!")
 
-        Returns
-        -------
-        hyperparameters: dict
-            Dictionary containing the hyperparameters of the model
-        """
-        hyperparameters_dict = {
-            'epochs': epochs,
-            'batch_size': batch_size,
-            'img_size': image_size,
-            'device': device,
-            'seed': seed
-        }
-        return hyperparameters_dict
+    @staticmethod
+    def check_lesion_names(lesion_names, yaml_file):
+        with open(yaml_file, 'r', encoding = 'utf-8') as file:
+            data = yaml.safe_load(file)
+        class_names = data.get('names', {})
+        for lesion in lesion_names:
+            if lesion not in class_names:
+                raise ValueError(f"Lesion {lesion} does not exist!")
+
+    @staticmethod
+    def format_training_instructions(train_instructions):
+        default_settings = {'model_architecture' : 'yolo11n-seg',
+                            'model_path' : '.',
+                            'model_name' : f'model_created_{datetime.datetime.now().strftime("%Y_%m_%d_%H_%M_%S")}',
+                            'validation_name' : 'validation',
+                            'save_validation' : True
+                            }
+        default_hyperparameters = {'epochs' : 100,
+                                  'batch_size' : 16,
+                                  'image_size' : 640,
+                                  'device' : 'cpu',
+                                  'seed' : random.randint(0, 1000)
+                                   }
+        complete_training_instructions = dict()
+        complete_training_instructions['dataset'] = train_instructions['dataset']
+        complete_training_instructions['settings'] = {key: train_instructions['settings'].get(key, default) for key, default in default_settings.items()}
+        complete_training_instructions['hyperparameters'] = {key: train_instructions['hyperparameters'].get(key, default) for key, default in default_hyperparameters.items()}
+        return complete_training_instructions
+
+
+
+    @staticmethod
+    def format_usage_instructions(usage_instructions):
+        default_settings = {'output_path' : '.',
+                            'save_output' : True
+                            }
+        default_parameters = {'confidence_threshold' : 0.5,
+                              'pixel_size' : 1
+                              }
+        complete_usage_instructions = dict()
+        complete_usage_instructions['dataset'] = usage_instructions['dataset']
+        complete_usage_instructions['settings'] = {key: usage_instructions['settings'].get(key, default) for key, default in
+                                             default_settings.items()}
+        complete_usage_instructions['parameters'] = {key: usage_instructions['parameters'].get(key, default) for
+                                                    key, default in default_parameters.items()}
+        return complete_usage_instructions
+

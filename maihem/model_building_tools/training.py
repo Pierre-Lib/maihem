@@ -40,11 +40,11 @@ def train_model(dataset_path,
     model.train(data = dataset_path,
                 epochs = hyperparameters['epochs'],
                 batch = hyperparameters['batch_size'],
-                imgsz = hyperparameters['img_size'],
+                imgsz = hyperparameters['image_size'],
                 device = hyperparameters['device'],
                 seed = hyperparameters['seed'],
                 name = save_name,
-                project = save_path
+                project = save_path,
                 )
 
     print(f"Training completed. Model saved to {save_name}.pt")
