@@ -1,0 +1,34 @@
+{
+  "Train": {
+    "dataset": "coco8-seg.yaml",
+    "settings": {
+      "model_architecture": "yolo11n-seg",
+      "model_path": ".",
+      "model_name": "test_model",
+      "validation_name": "test_validation",
+      "save_validation": true
+    },
+    "hyperparameters": {
+      "epochs": 10,
+      "image_size": 640,
+      "device": "cpu",
+      "seed": 16
+    }
+  },
+  "Usage": {
+    "dataset": "example_pictures",
+    "settings": {
+      "model_path": "./test_model/weights/best.pt",
+      "yaml_path": "coco8-seg.yaml",
+      "output_path": ".",
+      "save_output": true
+    },
+    "parameters": {
+      "confidence_threshold": 0.5,
+      "lesion_names": [
+        "dog",
+        "cat"
+      ]
+    }
+  }
+}

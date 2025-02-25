@@ -5,7 +5,7 @@ import datetime
 from maihem.core.runner import Runner
 
 TESTS_DIR = Path(__file__).parent.parent
-INPUT_FILE_PATH = TESTS_DIR / 'example_input.json'
+INPUT_FILE_PATH = TESTS_DIR / 'test_input.json'
 
 
 my_test_runner = Runner(input_file=INPUT_FILE_PATH, description = "A test runner class")

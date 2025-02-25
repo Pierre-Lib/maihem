@@ -8,6 +8,6 @@ def maihem_main(input_file = None):
     run.plan_training()
     run.plan_usage()
     training_results = run.execute_training()
-    usage_results = run.execute_usage
+    usage_results = run.execute_usage()
     print(training_results)
     print(usage_results)

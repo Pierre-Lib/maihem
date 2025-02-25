@@ -7,7 +7,7 @@ from maihem.in_out.input import Input
 
 TESTS_DIR = Path(__file__).parent.parent
 
-INPUT_FILE_PATH = TESTS_DIR / 'example_input.json'
+INPUT_FILE_PATH = TESTS_DIR / 'test_input.json'
 
 class MyTestCase(unittest.TestCase):
     """Class to test import functions"""

@@ -36,6 +36,7 @@ class Input:
 
     @staticmethod
     def check_path(filename):
+        filename = Path(filename)
         if not Path.exists(filename):
             raise ValueError(f"File {filename} does not exist!")
 

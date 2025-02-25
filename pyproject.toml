@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = 'maihem'
-version = '0.1.0'
+version = '0.1.1'
 description = "A package for YOLO-based segmentation and analysis"
 readme = 'README.md'
 license = { text = 'MIT'}
@@ -24,7 +24,7 @@ classifiers = []
 Homepage = 'https://github.com/Pierre-Lib/maihem'
 
 [project.scripts]
-maihem-example = 'maihem.example:maihem_example'
+maihem = 'maihem.bin.bin:entry_point'
 
 [project.gui-scripts]
-maihem = 'maihem.bin.maihem:entry_point'
+maihem = 'maihem.bin.bin:entry_point'

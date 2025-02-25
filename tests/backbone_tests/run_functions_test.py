@@ -1,8 +1,12 @@
 """Tests for the main package binaries"""
 
 import unittest
+from pathlib import Path
 
 from maihem.backbone.run_functions import model_training_and_validation, detections_and_calculations
+
+
+TESTS_DIR = Path(__file__).parent.parent
 
 training_instructions = {"dataset" : "coco8-seg.yaml",
                          "settings" : {
@@ -22,10 +26,10 @@ training_instructions = {"dataset" : "coco8-seg.yaml",
                          }
 
 usage_instructions = {
-            "dataset" : "test_img.jpg",
+            "dataset" : TESTS_DIR / "test_img.jpg",
             "settings" : {
-              "model_path" : "yolo11n-seg.pt",
-              "yaml_path" : "coco8-seg_test.yaml",
+              "model_path" : TESTS_DIR / "yolo11n-seg.pt",
+              "yaml_path" : TESTS_DIR / "coco8-seg_test.yaml",
               "output_path" : ".",
               "save_output" : True
             },

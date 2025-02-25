@@ -20,8 +20,9 @@ class Runner:
 
         if 'Usage' in self.instructions.keys():
             Input.check_path(self.instructions['Usage']['dataset'])
-            Input.check_path(self.instructions['Usage']['settings']['model_path'])
             Input.check_path(self.instructions['Usage']['settings']['yaml_path'])
+            if 'Train' not in self.instructions.keys():
+                Input.check_path(self.instructions['Usage']['settings']['model_path'])
             Input.check_lesion_names(self.instructions['Usage']['parameters']['lesion_names'], self.instructions['Usage']['settings']['yaml_path'])
         else:
             self.instructions['Usage'] = False
