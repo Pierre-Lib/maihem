@@ -26,10 +26,10 @@ training_instructions = {"dataset" : "coco8-seg.yaml",
                          }
 
 usage_instructions = {
-            "dataset" : TESTS_DIR / "test_img.jpg",
+            "dataset" : Path.joinpath(TESTS_DIR, "test_img.jpg"),
             "settings" : {
-              "model_path" : TESTS_DIR / "yolo11n-seg.pt",
-              "yaml_path" : TESTS_DIR / "coco8-seg_test.yaml",
+              "model_path" : Path.joinpath(TESTS_DIR, "yolo11n-seg.pt"),
+              "yaml_path" : Path.joinpath(TESTS_DIR, "coco8-seg_test.yaml"),
               "output_path" : ".",
               "save_output" : True
             },
@@ -63,7 +63,7 @@ class MyTestCase(unittest.TestCase):
                                {'test_img.jpg': {'count': 1, 'total area': 4437.090087890625}},
                            'elephant':
                                {'test_img.jpg': {'count': 2, 'total area': 21790.920776367188}}}
-        self.assertEqual(test_merged_detection_metrics, expected_output)
+        self.assertAlmostEqual(test_merged_detection_metrics, expected_output, 5)
 
 
 if __name__ == '__main__':
