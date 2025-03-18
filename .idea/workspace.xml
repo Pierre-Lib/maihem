@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="new_package">
-      <change beforePath="$PROJECT_DIR$/maihem_code/backbone/run_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/backbone/run_functions.py" afterDir="false" />
+    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Making adjustments">
+      <change beforePath="$PROJECT_DIR$/maihem_code/bin/bin.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/bin/bin.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <workItem from="1740487534541" duration="7892000" />
       <workItem from="1740566719747" duration="2888000" />
       <workItem from="1741096717235" duration="1397000" />
-      <workItem from="1742293965298" duration="620000" />
+      <workItem from="1742293965298" duration="943000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -265,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742294181355</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Making adjustments">
+      <option name="closed" value="true" />
+      <created>1742294701904</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1742294701904</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +292,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new_package" />
-    <option name="LAST_COMMIT_MESSAGE" value="new_package" />
+    <MESSAGE value="Making adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Making adjustments" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/maihem$training.coverage" NAME="training Coverage Results" MODIFIED="1737567067157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_building" />
