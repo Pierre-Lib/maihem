@@ -13,6 +13,15 @@ def model_training_and_validation(training_instructions):
 
     Parameters
     ----------
+    training_instructions: dict
+        Dictionary with instructions for training the model:
+            dataset: path to the training dataset
+            hyperparameters: dictionary with hyperparameters
+            model_path: path to save the trained model
+            model_name: name of the trained model
+            model_architecture: architecture of the trained model
+            validation_name: name of the folder to save the validation metrics
+            save_validation: True/False to save the validation metrics
 
     Returns
     -------
@@ -27,7 +36,7 @@ def model_training_and_validation(training_instructions):
     saving_name = training_instructions['settings']['model_name']
     model_arch = training_instructions['settings']['model_architecture']
     saving_validation = training_instructions['settings']['validation_name']
-    save_TF = training_instructions['settings']['save_validation']
+    save_tf = training_instructions['settings']['save_validation']
 
     #Train the model
     print(f"Commencing model training for {model_hyperparameters['epochs']} epochs")
@@ -44,7 +53,7 @@ def model_training_and_validation(training_instructions):
     validation_metrics = validate_model(model_path = f'{saving_path}/{saving_name}/weights/best.pt',
                                         save_path = f'{saving_path}/{saving_name}/Validation',
                                         save_name = saving_validation,
-                                        save = save_TF)
+                                        save = save_tf)
 
     print(f"Model validation metrics saved in\n"
           f"{saving_path}/{saving_name}/Validation/{saving_validation}/metrics.json")
@@ -57,25 +66,20 @@ def detections_and_calculations(usage_instructions):
 
     Parameters
     ----------
-    model_path : str
-        Location of the model to use
-    yaml_file_path : str
-        Location of the yaml file for the training dataset, to extract class names and IDs
-    image_path : str
-        Location of the images to use
-    output_path : str
-        Location to save the output
-    confidence_threshold : float
-        Confidence threshold for detections
-    lesion_names : list
-        Specific classes for which to perform calculations
-    pixel_size : float
-        Size of pixels to calculate real area of detections
+    usage_instructions: dict
+        A dictionary with instructions for detection and calculations
+            model_path: path to the trained model to be used
+            dataset: path to the dataset to be analysed
+            yaml_path: path to the yaml file with lesion names and IDs
+            output_path: path to save the data
+            confidence_threshold: confidence threshold for detections
+            lesion_names: names of the lesions to be detected
+            pixel_size: size of pixels (in μm)
 
     Returns
     -------
     complete_measures_dict : dict
-        Dictionary of
+        Dictionary of all the detections, their number and total area for each image
     """
 
     #Assign values
