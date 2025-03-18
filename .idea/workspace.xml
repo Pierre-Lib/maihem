@@ -5,177 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="new_package">
-      <change afterPath="$PROJECT_DIR$/example/maihem_example_defunct.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/.maihem_example.py.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/example/maihem_example.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation2/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation3/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/Validation/validation4/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/events.out.tfevents.1737723377.scassa.38338.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/train_batch1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/train_batch10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/train_batch11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/train_batch12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/train_batch2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/weights/best.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example/weights/last.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/events.out.tfevents.1738153154.scassa.44509.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/weights/best.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example2/weights/last.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/events.out.tfevents.1738153274.scassa.49209.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/weights/best.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example3/weights/last.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example4/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example4/events.out.tfevents.1738153301.scassa.49587.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/BoxF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/BoxPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/BoxP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/BoxR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/MaskF1_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/MaskPR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/MaskP_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/MaskR_curve.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/args.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/confusion_matrix.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/confusion_matrix_normalized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/events.out.tfevents.1738153422.scassa.50210.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/labels_correlogram.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/results.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/train_batch0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/val_batch0_labels.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/val_batch0_pred.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/weights/best.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/maihem_example5/weights/last.pt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict/cats_dogs_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict/cats_dogs_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict/cats_dogs_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict/detections.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict/measures.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict/not_cats_dogs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict2/cats_dogs_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict2/cats_dogs_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict2/cats_dogs_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict2/not_cats_dogs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict3/cats_dogs_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict3/cats_dogs_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict3/cats_dogs_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict3/not_cats_dogs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict4/cats_dogs_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict4/cats_dogs_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict4/cats_dogs_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/predict4/not_cats_dogs.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/bin/bin.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/bin/bin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/core/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/core/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/core/runner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maihem/in_out/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem/in_out/input.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/backbone_tests/run_functions_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/backbone_tests/run_functions_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/core_tests/runner_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/core_tests/runner_tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/example_input.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_input.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/in_out_tests/input_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/in_out_tests/input_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -262,7 +92,9 @@
       <workItem from="1738839497910" duration="1554000" />
       <workItem from="1739282386886" duration="450000" />
       <workItem from="1740311467079" duration="37600000" />
-      <workItem from="1740487534541" duration="4520000" />
+      <workItem from="1740487534541" duration="7892000" />
+      <workItem from="1740566719747" duration="2888000" />
+      <workItem from="1741096717235" duration="1397000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -408,7 +240,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740442584033</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="new_package">
+      <option name="closed" value="true" />
+      <created>1740492098904</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1740492098904</updated>
+    </task>
+    <task id="LOCAL-00020" summary="new_package">
+      <option name="closed" value="true" />
+      <created>1740493763214</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1740493763214</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,6 +281,6 @@
     <SUITE FILE_PATH="coverage/maihem$training.coverage" NAME="training Coverage Results" MODIFIED="1737567067157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_building" />
     <SUITE FILE_PATH="coverage/maihem$maihem_example.coverage" NAME="maihem_example Coverage Results" MODIFIED="1740490439002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/example" />
     <SUITE FILE_PATH="coverage/maihem$detections.coverage" NAME="detections Coverage Results" MODIFIED="1738146759475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_usage" />
-    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1740441250071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/core_tests" />
+    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1740566752571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/backbone_tests" />
   </component>
 </project>

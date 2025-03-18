@@ -4,8 +4,8 @@ import unittest
 import cv2
 from pathlib import Path
 
-from maihem.model_usage_tools.detections import detection_segmentation
-from maihem.model_usage_tools.measures_calculations import MeasuresCalculations
+from maihem_code.model_usage_tools.detections import detection_segmentation
+from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
 
 TESTS_DIR = Path(__file__).parent.parent
 THIS_DIR = Path(__file__).parent

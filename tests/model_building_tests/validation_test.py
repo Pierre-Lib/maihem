@@ -3,7 +3,7 @@
 import unittest
 from pathlib import Path
 
-from maihem.model_building_tools.validation import validate_model
+from maihem_code.model_building_tools.validation import validate_model
 
 TEST_DIR = Path(__file__).parent
 WEIGHTS_PATH = TEST_DIR / 'model_for_tests' / 'weights'

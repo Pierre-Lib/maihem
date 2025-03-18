@@ -3,7 +3,7 @@
 import unittest
 from pathlib import Path
 
-from maihem.backbone.run_functions import model_training_and_validation, detections_and_calculations
+from maihem_code.backbone.run_functions import model_training_and_validation, detections_and_calculations
 
 
 TESTS_DIR = Path(__file__).parent.parent

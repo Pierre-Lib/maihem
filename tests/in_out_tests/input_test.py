@@ -3,7 +3,7 @@
 import unittest
 from pathlib import Path
 
-from maihem.in_out.input import Input
+from maihem_code.in_out.input import Input
 
 TESTS_DIR = Path(__file__).parent.parent
 

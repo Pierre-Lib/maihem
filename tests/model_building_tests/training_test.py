@@ -2,7 +2,7 @@
 
 import unittest
 
-from maihem.model_building_tools.training import train_model
+from maihem_code.model_building_tools.training import train_model
 
 class MyTestCase(unittest.TestCase):
     """Class to test the training function"""

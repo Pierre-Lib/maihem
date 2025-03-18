@@ -1,7 +1,7 @@
 from pickle import FALSE
 
-from maihem.in_out.input import Input
-from maihem.backbone.run_functions import model_training_and_validation, detections_and_calculations
+from maihem_code.in_out.input import Input
+from maihem_code.backbone.run_functions import model_training_and_validation, detections_and_calculations
 
 class Runner:
     def __init__(self, input_file = None, description = "YOLO instructions"):

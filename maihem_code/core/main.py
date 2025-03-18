@@ -1,4 +1,4 @@
-from maihem.core.runner import Runner
+from maihem_code.core.runner import Runner
 
 
 def maihem_main(input_file = None):

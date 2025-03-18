@@ -2,7 +2,7 @@
 
 import unittest
 
-from maihem.in_out.output import merge_detection_measures
+from maihem_code.in_out.output import merge_detection_measures
 
 class MyTestCase(unittest.TestCase):
     """Class to test output functions"""

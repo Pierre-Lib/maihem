@@ -2,7 +2,7 @@ import unittest
 from pathlib import Path
 import datetime
 
-from maihem.core.runner import Runner
+from maihem_code.core.runner import Runner
 
 TESTS_DIR = Path(__file__).parent.parent
 INPUT_FILE_PATH = TESTS_DIR / 'test_input.json'

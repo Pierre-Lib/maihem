@@ -4,7 +4,7 @@
 import argparse
 import datetime
 import sys
-from maihem.core.main import maihem_main
+from maihem_code.core.main import maihem_main
 
 _DATE_FORMAT = '%d.%m.%Y %H:%M:%S'
 

@@ -1,5 +1,5 @@
 
-from maihem.core.main import maihem_main
+from maihem_code.core.main import maihem_main
 from pathlib import Path
 
 PATH_TO_HERE = Path(__file__).parent
