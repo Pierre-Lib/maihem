@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Making adjustments">
-      <change beforePath="$PROJECT_DIR$/maihem_code/bin/bin.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/bin/bin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/core/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/core/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/core/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/core/runner.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +97,7 @@
       <workItem from="1740487534541" duration="7892000" />
       <workItem from="1740566719747" duration="2888000" />
       <workItem from="1741096717235" duration="1397000" />
-      <workItem from="1742293965298" duration="943000" />
+      <workItem from="1742293965298" duration="4053000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -273,7 +275,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742294701904</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Making adjustments">
+      <option name="closed" value="true" />
+      <created>1742295209371</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742295209371</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

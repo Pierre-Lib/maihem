@@ -1,7 +1,16 @@
+"""Goes through the input file instructions and uses them to perform the designated tasks"""
+
 from maihem_code.core.runner import Runner
 
 
 def maihem_main(input_file = None):
+    """Function to execute the instructions from the input file
+
+    Parameters
+    ----------
+    input_file : str
+        The input file to execute
+    """
     run = Runner(input_file)
     run.read_instructions()
     run.check_instructions()
