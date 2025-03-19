@@ -1,8 +1,9 @@
 """Tests for the measurement calculations"""
 
 import unittest
-import cv2
 from pathlib import Path
+import cv2
+
 
 from maihem_code.model_usage_tools.detections import detection_segmentation
 from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
@@ -20,7 +21,9 @@ sample_detections = detection_segmentation(
 
 #prepare some data to be used by multiple tests
 test_metrics = MeasuresCalculations(sample_detections)
-test_class_names = MeasuresCalculations.get_class_names(yaml_file_path = TESTS_DIR / 'coco8-seg_test.yaml')
+test_class_names = MeasuresCalculations.get_class_names(
+    yaml_file_path = TESTS_DIR / 'coco8-seg_test.yaml')
+
 test_image = cv2.imread(TESTS_DIR / 'test_img.jpg')
 test_image_dimensions = test_image.shape
 
