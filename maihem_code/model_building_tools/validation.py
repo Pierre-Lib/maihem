@@ -33,10 +33,8 @@ def validate_model(model_path, save_path, save_name, save_tf):
     metrics = {'map50-95_box' : validation.box.map,
                'map50_box': validation.box.map50,
                'map75_box' : validation.box.map75,
-               'maps_box' : validation.box.maps,
                'map50-95_seg' : validation.seg.map,
                'map50_seg' : validation.seg.map50,
-               'map75_seg' : validation.seg.map75,
-               'maps_seg' : validation.seg.maps}
+               'map75_seg' : validation.seg.map75}
 
     return metrics
