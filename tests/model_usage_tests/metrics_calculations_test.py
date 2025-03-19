@@ -4,7 +4,6 @@ import unittest
 import shutil
 from pathlib import Path
 import cv2
-from setuptools.compat.py311 import shutil_rmtree
 
 from maihem_code.model_usage_tools.detections import detection_segmentation
 from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations

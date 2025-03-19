@@ -12,7 +12,7 @@ def maihem_main(input_file = None):
         The input file to execute
     """
     if not input_file:
-        raise Exception("No input file provided; ending run")
+        raise TypeError("No input file provided; ending run")
     run = Runner(input_file)
     run.read_instructions()
     run.check_instructions()

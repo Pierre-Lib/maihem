@@ -9,16 +9,23 @@ pip install .
 
 Run unit tests (requires pytest):
 ---------------------------------
-pytest tests/
+pytest
 
-Run example:
+Test quality of code style (requires pylint and pycodestyle):
+-------------------------------------------------------------
+pylint maihem_code example tests
+
+pycodestyle */*.py
+
+Run examples:
 ------------
+There are four examples showcasing different aspects of the package.\
+They can all be accessed through the same method with a simple input step:
+
 cd example\
-python maihem_example.py
+sh maihem_example.sh
 
 OR
 
 cd example\
-maihem -i example_input.json
-
-
+python maihem_example.py

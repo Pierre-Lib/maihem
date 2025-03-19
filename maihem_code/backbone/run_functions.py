@@ -8,8 +8,10 @@ from maihem_code.model_building_tools.validation import validate_model
 from maihem_code.model_usage_tools.detections import detection_segmentation
 from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
 
+
 def model_training_and_validation(training_instructions):
-    """A function to train a model, save it, run a validation and output validation metrics.
+    """A function to train a model, save it,
+     run a validation and output validation metrics.
 
     Parameters
     ----------
