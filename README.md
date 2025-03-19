@@ -13,9 +13,9 @@ pytest
 
 Test quality of code style (requires pylint and pycodestyle):
 -------------------------------------------------------------
-pylint maihem_code example tests
+pylint maihem_code tests example
 
-pycodestyle */*.py
+pycodestyle maihem_code tests example
 
 Run examples:
 ------------
