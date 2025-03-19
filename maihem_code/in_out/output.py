@@ -18,8 +18,9 @@ def merge_detection_measures(count_dict, area_dict):
     merged_dict : dict
         A dictionary having, for each image, a sub dictionary with both count and area
     """
-    merged_dict = {}
-    for key in count_dict:
-        merged_dict[key] = {'count': count_dict[key], 'total area': area_dict[key]}
 
+    merged_dict = {
+        image : {'count' : count_dict[image],
+                 'total area' : area_dict[image]} for image in count_dict
+    }
     return merged_dict
