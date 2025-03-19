@@ -1,9 +1,10 @@
-"""Tests for the main package binaries"""
+"""Tests for the package backbone"""
 
 import unittest
 from pathlib import Path
 
-from maihem_code.backbone.run_functions import model_training_and_validation, detections_and_calculations
+from maihem_code.backbone.run_functions import (model_training_and_validation,
+                                                detections_and_calculations)
 
 
 TESTS_DIR = Path(__file__).parent.parent
@@ -42,7 +43,7 @@ usage_instructions = {
 
 
 class MyTestCase(unittest.TestCase):
-    """A class with test functions for the two binary functions of the package"""
+    """A class with test functions for the two backbone functions of the package"""
 
     def test_training_and_validation(self):
         """Tests the training and validation function.
