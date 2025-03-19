@@ -53,7 +53,7 @@ def model_training_and_validation(training_instructions):
     validation_metrics = validate_model(model_path = f'{saving_path}/{saving_name}/weights/best.pt',
                                         save_path = f'{saving_path}/{saving_name}/Validation',
                                         save_name = saving_validation,
-                                        save = save_tf)
+                                        save_tf = save_tf)
 
     print(f"Model validation metrics saved in\n"
           f"{saving_path}/{saving_name}/Validation/{saving_validation}/metrics.json")

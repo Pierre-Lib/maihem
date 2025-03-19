@@ -38,31 +38,31 @@ class Input:
         """
 
     @staticmethod
-    def parse_instructions_file(input_file):
+    def parse_instructions_file(input_file_path):
         """Reads the instructions file into a dictionary
 
         Parameters
         ----------
-        input_file: str
+        input_file_path: str
             Path to the file with instructions
 
         Returns
         -------
-        instructions: dict
+        instructions_dict: dict
             Dictionary of instructions
         """
-        with open(input_file, 'r', encoding = 'utf-8') as file:
-            instructions = json.load(file)
+        with open(input_file_path, 'r', encoding = 'utf-8') as file:
+            instructions_dict = json.load(file)
 
-        return instructions
+        return instructions_dict
 
     @staticmethod
-    def check_path(filename):
+    def check_path(filepath):
         """Checks if the provided path exists
 
         Parameters
         ----------
-        filename: str
+        filepath: str
             Path to file
 
         Raises
@@ -70,19 +70,19 @@ class Input:
         ValueError
             If the file cannot be found at the provided path
         """
-        filename = Path(filename)
+        filename = Path(filepath)
         if not Path.exists(filename):
             raise ValueError(f"File {filename} does not exist!")
 
     @staticmethod
-    def check_lesion_names(lesion_names, yaml_file):
+    def check_lesion_names(lesion_names, yaml_file_path):
         """Checks if the provided lesion names exist
 
         Parameters
         ----------
         lesion_names: list
             Lesions to be checked
-        yaml_file: str
+        yaml_file_path: str
             Path to the yaml file with lesions the model is trained to detect
 
         Raises
@@ -90,21 +90,22 @@ class Input:
         ValueError
             If the lesion name cannot be found in the yaml file
         """
-        with open(yaml_file, 'r', encoding = 'utf-8') as file:
-            data = yaml.safe_load(file)
-        class_names = data.get('names', {})
+
+        with open(yaml_file_path, 'r', encoding = 'utf-8') as file:
+            yaml_data = yaml.safe_load(file)
+        class_names = yaml_data.get('names', {})
         for lesion in lesion_names:
             if lesion not in class_names.values():
                 raise ValueError(f"Lesion {lesion} does not exist!")
 
     @staticmethod
-    def format_training_instructions(train_instructions):
+    def format_training_instructions(training_instructions):
         """Formats the training instructions into a dictionary. If some instructions are missing,
         replaces them with default values
 
         Parameters
         ----------
-        train_instructions: dict
+        training_instructions: dict
             Dictionary of inputted training instructions
 
         Returns
@@ -128,10 +129,15 @@ class Input:
                                   'device' : 'cpu',
                                   'seed' : random.randint(0, 1000)
                                    }
-        complete_training_instructions = {'dataset': train_instructions['dataset'],
-                                          'settings': {**default_settings, **train_instructions['settings']},
-                                          'hyperparameters': {**default_hyperparameters,
-                                                              **train_instructions['hyperparameters']}}
+        complete_training_instructions = {'dataset': training_instructions['dataset'],
+                                          'settings': {
+                                              **default_settings,
+                                              **training_instructions['settings']
+                                          },
+                                          'hyperparameters': {
+                                              **default_hyperparameters,
+                                              **training_instructions['hyperparameters']
+                                          }}
 
         return complete_training_instructions
 
@@ -164,7 +170,13 @@ class Input:
                               'lesion_names' : ['not right']
                               }
         complete_usage_instructions = {'dataset': usage_instructions['dataset'],
-                                       'settings' : {**default_settings, **usage_instructions['settings']},
-                                       'parameters' : {**default_parameters, **usage_instructions['parameters']},}
+                                       'settings' : {
+                                           **default_settings,
+                                           **usage_instructions['settings']
+                                       },
+                                       'parameters' : {
+                                           **default_parameters,
+                                           **usage_instructions['parameters']
+                                       }}
 
         return complete_usage_instructions

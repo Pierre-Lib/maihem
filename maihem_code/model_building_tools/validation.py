@@ -2,7 +2,7 @@
 
 from ultralytics import YOLO
 
-def validate_model(model_path, save_path, save_name, save):
+def validate_model(model_path, save_path, save_name, save_tf):
     """Runs validation on the previously trained model and outputs metrics
     Only the path to the trained model is needed, other arguments are remembered
     For now, default validation metrics are used
@@ -15,7 +15,7 @@ def validate_model(model_path, save_path, save_name, save):
         Path to save validation metrics
     save_name : str
         Name to save validation metrics
-    save : bool
+    save_tf : bool
         Whether to save validation metrics
 
     Returns
@@ -28,7 +28,7 @@ def validate_model(model_path, save_path, save_name, save):
 
     model = YOLO(model_path)
 
-    validation = model.val(plots = True, project = save_path, name = save_name, save_json = save)
+    validation = model.val(plots = True, project = save_path, name = save_name, save_json = save_tf)
 
     metrics = {'map50-95_box' : validation.box.map,
                'map50_box': validation.box.map50,

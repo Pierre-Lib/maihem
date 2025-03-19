@@ -10,7 +10,7 @@ TESTS_DIR = Path(__file__).parent.parent
 INPUT_FILE_PATH = TESTS_DIR / 'test_input.json'
 
 
-my_test_runner = Runner(input_file = INPUT_FILE_PATH, description = "A test runner class")
+my_test_runner = Runner(input_file_path= INPUT_FILE_PATH, description ="A test runner class")
 
 class MyTestCase(unittest.TestCase):
     """Tests for the Runner class"""

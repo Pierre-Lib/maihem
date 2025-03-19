@@ -20,49 +20,49 @@ def detection_segmentation(model_path, image_path, save_path, conf_threshold):
 
     Returns
     -------
-    results: list
+    detection_results: list
         A list of detections for each image analysed.
         Each image result is in format ultralytics.engine.results.Results
     """
 
     model = YOLO(model_path)
 
-    results = model.predict(source = image_path,
+    detection_results = model.predict(source = image_path,
                             conf = conf_threshold,
                             project = save_path,
                             save = True)
 
-    detection_data = []
-    for result in results:
-        image_path = result.path
-        if len(result.boxes.cls) == 0:
+    all_detections_data = []
+    for image_result in detection_results:
+        image_path = image_result.path
+        if len(image_result.boxes.cls) == 0:
             print(f"No detections in image {image_path}")
-            detection = {
+            detection_data = {
                 'image_path': image_path,
                 'class_id' : 'None'
             }
-            detection_data.append(detection)
+            all_detections_data.append(detection_data)
             continue
-        for box, mask in zip(result.boxes, result.masks):
+        for box, mask in zip(image_result.boxes, image_result.masks):
             class_id = int(box.cls)
-            bbox = box.xyxy.cpu().numpy() if hasattr(box.xyxy, 'cpu') else box.xyxy
-            bbox = bbox[0]
+            bounding_box = box.xyxy.cpu().numpy() if hasattr(box.xyxy, 'cpu') else box.xyxy
+            bounding_box = bounding_box[0]
             mask_array = mask.xy[0].tolist()
             detection = {
                 'image_path': image_path,
                 'class_id': class_id,
                 'confidence': float(box.conf),
                 'bbox': [
-                    int(bbox[0]),
-                    int(bbox[1]),
-                    int(bbox[2]),
-                    int(bbox[3])
+                    int(bounding_box[0]),
+                    int(bounding_box[1]),
+                    int(bounding_box[2]),
+                    int(bounding_box[3])
                 ],
                 'segmentation': mask_array
                 }
-            detection_data.append(detection)
+            all_detections_data.append(detection)
 
     with open(f'{save_path}/predict/detections.json', 'w', encoding = 'utf-8') as outfile:
-        json.dump(detection_data, outfile, indent = 4)
+        json.dump(all_detections_data, outfile, indent = 4)
 
-    return results
+    return detection_results

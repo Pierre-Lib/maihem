@@ -53,28 +53,29 @@ class MeasuresCalculations:
             A dictionary matching class IDs and class names
         """
         with open(yaml_file_path, encoding = 'utf-8') as file:
-            data = yaml.safe_load(file)
-        class_names = data.get('names', {})
+            yaml_data = yaml.safe_load(file)
+        class_names = yaml_data.get('names', {})
         return class_names
 
     @staticmethod
-    def get_specific_class_id(class_names, specific_class_name):
+    def get_specific_class_id(all_class_names, specific_class_name):
         """Gets the class ID corresponding to the specified class name
 
         Parameters
         ----------
-        class_names : dict
+        all_class_names : dict
             A dictionary matching class IDs and class names
         specific_class_name : str
             The name of a class for which to retrieve the ID
 
         Returns
         -------
-        class_id : int
+        specific_class_id : int
             The ID corresponding to the specified class name
         """
-        class_id = (list(class_names.keys())[list(class_names.values()).index(specific_class_name)])
-        return class_id
+        specific_class_id = (list(all_class_names.keys())[
+            list(all_class_names.values()).index(specific_class_name)])
+        return specific_class_id
 
 
     @staticmethod
@@ -101,12 +102,12 @@ class MeasuresCalculations:
         actual_area = area_in_pixels * (pixel_size^2)
         return actual_area
 
-    def sum_areas_of_class(self, class_names, specific_class_name, pixel_size):
+    def sum_areas_of_class(self, all_class_names, specific_class_name, pixel_size):
         """Calculates the total area of all detections of a specific class in each image
 
         Parameters
         ----------
-        class_names : dict
+        all_class_names : dict
             A dictionary matching class IDs and class names
         specific_class_name : str
             The name of the class for which to calculate the total area
@@ -121,7 +122,7 @@ class MeasuresCalculations:
         """
         class_area_dict = {}
         for detection in self.detections:
-            class_id = self.get_specific_class_id(class_names, specific_class_name)
+            specific_class_id = self.get_specific_class_id(all_class_names, specific_class_name)
             image_path = detection.path
             image_name = image_path.split('/')[-1]
             image = cv2.imread(image_path)
@@ -131,18 +132,18 @@ class MeasuresCalculations:
                 class_area_dict[image_name] = total_class_area
                 continue
             for box, mask in zip(detection.boxes, detection.masks.data):
-                if int(box.cls) == class_id:
+                if int(box.cls) == specific_class_id:
                     mask_area = self.calculate_area(mask, image_dimensions, pixel_size = pixel_size)
                     total_class_area += mask_area
             class_area_dict[image_name] = total_class_area
         return class_area_dict
 
-    def total_number_of_occurrences(self, class_names, specific_class_name):
+    def total_number_of_occurrences(self, all_class_names, specific_class_name):
         """Calculates the total number of detections of a specific class in each image
 
         Parameters
         ----------
-        class_names : dict
+        all_class_names : dict
             A dictionary mapping class IDs and class names
         specific_class_name : str
             The name of the class for which to calculate the total area
@@ -155,11 +156,11 @@ class MeasuresCalculations:
         """
         class_number_dict = {}
         for detection in self.detections:
-            class_id = self.get_specific_class_id(class_names, specific_class_name)
+            specific_class_id = self.get_specific_class_id(all_class_names, specific_class_name)
             image_name = detection.path.split('/')[-1]
             total_number_of_occurrences = 0
             for box in detection.boxes:
-                if int(box.cls) == class_id:
+                if int(box.cls) == specific_class_id:
                     total_number_of_occurrences += 1
             class_number_dict[image_name] = total_number_of_occurrences
         return class_number_dict

@@ -15,7 +15,7 @@ class MyTestCase(unittest.TestCase):
         test_validation = validate_model(model_path = WEIGHTS_PATH / 'best.pt',
                                          save_path = TEST_DIR / 'Validation',
                                          save_name = 'test_validation',
-                                         save = True)
+                                         save_tf = True)
         test_map75_box = test_validation['map75_box']
         test_map75_seg = test_validation['map75_seg']
         expected_map75_box = 0.711933287625696

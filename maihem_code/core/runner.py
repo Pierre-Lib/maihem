@@ -32,16 +32,16 @@ class Runner:
         If there are usage instructions, runs the usage functions
         """
 
-    def __init__(self, input_file = None, description = "YOLO instructions"):
+    def __init__(self, input_file_path = None, description ="YOLO instructions"):
         """
         Parameters
         ----------
-        input_file : str
+        input_file_path : str
             A string with the path to the input file
         description : str
             A string with the description of the input file
         """
-        self.input_file = input_file
+        self.input_file = input_file_path
         self.description = description
         self.instructions = {}
 
