@@ -1,7 +1,9 @@
-"""A class which takes raw segmentation results and calculates various measures"""
+"""A class which takes raw segmentation results and
+calculates various measures"""
 import yaml
 import cv2
 import numpy
+
 
 class MeasuresCalculations:
     """
@@ -18,15 +20,18 @@ class MeasuresCalculations:
     Methods
     -------
     get_class_names(yaml_file_path)
-        Gets a dictionary matching the class IDs available in results to actual class names
+        Gets a dictionary matching the class IDs available in results to
+         actual class names
     get_specific_class_id(class_names, specific_class_name)
         Gets the class ID corresponding to the specified class name
     calculate_area(mask, image_dimensions, pixel_size)
         Calculates the area of a specific mask, and converts it to real units
     sum_areas_of_class(self, class_names, specific_class_name, pixel_size)
-        Calculates the total area of all detections of a specific class in each image
+        Calculates the total area of all detections of a specific class
+         in each image
     total_number_of_occurrences(self, class_names, specific_class_name)
-        Calculates the total number of detections of a specific class in each image
+        Calculates the total number of detections of a specific class
+         in each image
     """
 
     def __init__(self, detections):
@@ -34,25 +39,28 @@ class MeasuresCalculations:
         Parameters
         ----------
         detections : list
-            a list of segmentations from an image analysed by a trained YOLO model
+            a list of segmentations from an image analysed by
+             a trained YOLO model
         """
         self.detections = detections
 
     @staticmethod
     def get_class_names(yaml_file_path):
-        """Gets a dictionary matching the class IDs available in results to actual class names
+        """Gets a dictionary matching the class IDs available in results
+         to actual class names
 
         Parameters
         ----------
         yaml_file_path : str
-            Contains the path to a .yaml file with information on classes IDs and names
+            Contains the path to a .yaml file with information on
+             classes IDs and names
 
         Returns
         -------
         class_names : dict
             A dictionary matching class IDs and class names
         """
-        with open(yaml_file_path, encoding = 'utf-8') as file:
+        with open(yaml_file_path, encoding='utf-8') as file:
             yaml_data = yaml.safe_load(file)
         class_names = yaml_data.get('names', {})
         return class_names
@@ -77,10 +85,10 @@ class MeasuresCalculations:
             list(all_class_names.values()).index(specific_class_name)])
         return specific_class_id
 
-
     @staticmethod
     def calculate_area(mask, image_dimensions, pixel_size):
-        """Calculates the area of a specific mask, and converts it to real units
+        """Calculates the area of a specific mask,
+         and converts it to real units
 
         Parameters
         ----------
@@ -97,13 +105,18 @@ class MeasuresCalculations:
             The calculated area of the mask
         """
         mask = mask.numpy()
-        mask = cv2.resize(mask, (image_dimensions[0], image_dimensions[1]))
+        mask = cv2.resize(
+            mask,
+            (image_dimensions[0], image_dimensions[1])
+        )
         area_in_pixels = numpy.sum(mask)
-        actual_area = area_in_pixels * (pixel_size^2)
+        actual_area = area_in_pixels * (pixel_size ^ 2)
         return actual_area
 
-    def sum_areas_of_class(self, all_class_names, specific_class_name, pixel_size):
-        """Calculates the total area of all detections of a specific class in each image
+    def sum_areas_of_class(self, all_class_names,
+                           specific_class_name, pixel_size):
+        """Calculates the total area of all detections of
+         a specific class in each image
 
         Parameters
         ----------
@@ -117,12 +130,15 @@ class MeasuresCalculations:
         Returns
         -------
         class_area_dict : dict
-            A dictionary matching image file name and total area of all detections
-            for the specified class in the image
+            A dictionary matching image file name and total area of
+             all detections for the specified class in the image
         """
         class_area_dict = {}
         for detection in self.detections:
-            specific_class_id = self.get_specific_class_id(all_class_names, specific_class_name)
+            specific_class_id = self.get_specific_class_id(
+                all_class_names,
+                specific_class_name
+            )
             image_path = detection.path
             image_name = image_path.split('/')[-1]
             image = cv2.imread(image_path)
@@ -133,13 +149,19 @@ class MeasuresCalculations:
                 continue
             for box, mask in zip(detection.boxes, detection.masks.data):
                 if int(box.cls) == specific_class_id:
-                    mask_area = self.calculate_area(mask, image_dimensions, pixel_size = pixel_size)
+                    mask_area = self.calculate_area(
+                        mask,
+                        image_dimensions,
+                        pixel_size=pixel_size
+                    )
                     total_class_area += mask_area
             class_area_dict[image_name] = total_class_area
         return class_area_dict
 
-    def total_number_of_occurrences(self, all_class_names, specific_class_name):
-        """Calculates the total number of detections of a specific class in each image
+    def total_number_of_occurrences(self,
+                                    all_class_names, specific_class_name):
+        """Calculates the total number of detections of
+         a specific class in each image
 
         Parameters
         ----------
@@ -151,12 +173,15 @@ class MeasuresCalculations:
         Returns
         -------
         class_number_dict : dict
-            A dictionary matching image file name and total count all detections
-            for the specified class in the image
+            A dictionary matching image file name and
+             total count all detections for the specified class in the image
         """
         class_number_dict = {}
         for detection in self.detections:
-            specific_class_id = self.get_specific_class_id(all_class_names, specific_class_name)
+            specific_class_id = self.get_specific_class_id(
+                all_class_names,
+                specific_class_name
+            )
             image_name = detection.path.split('/')[-1]
             total_number_of_occurrences = 0
             for box in detection.boxes:

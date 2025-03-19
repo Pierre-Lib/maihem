@@ -9,25 +9,27 @@ TESTS_DIR = Path(__file__).parent.parent
 THIS_DIR = Path(__file__).parent
 MODEL_PATH = TESTS_DIR / 'model_building_tests' / 'model_for_tests' / 'weights'
 
+
 class MyTestCase(unittest.TestCase):
     """Class to test detection functions"""
     def test_detections(self):
-        """tests that the class and one of the coordinates of a test detection are as expected"""
+        """tests that the class and one of the coordinates of a test detection
+         are as expected"""
         test_detection = detection_segmentation(
-            model_path = MODEL_PATH / 'best.pt',
-            image_path = TESTS_DIR / 'test_img.jpg',
-            save_path = THIS_DIR / 'test_predictions',
-            conf_threshold = 0.25
+            model_path=MODEL_PATH / 'best.pt',
+            image_path=TESTS_DIR / 'test_img.jpg',
+            save_path=THIS_DIR / 'test_predictions',
+            conf_threshold=0.25
         )
         detection = test_detection[0]
         box = detection.boxes[0]
         class_id = int(box.cls)
         bbox = box.xyxy.cpu().numpy()[0]
         bbox_0 = bbox[0]
-        test_dict = {'class' : class_id,
-                     'box_0' : bbox_0}
-        expected_dict = {'class' : 20,
-                         'box_0' : 237.02441}
+        test_dict = {'class': class_id,
+                     'box_0': bbox_0}
+        expected_dict = {'class': 20,
+                         'box_0': 237.02441}
 
         self.assertEqual(test_dict['class'], expected_dict['class'])
         self.assertAlmostEqual(test_dict['box_0'], expected_dict['box_0'], 1)

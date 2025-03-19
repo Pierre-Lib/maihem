@@ -9,6 +9,7 @@ TESTS_DIR = Path(__file__).parent.parent
 
 INPUT_FILE_PATH = TESTS_DIR / 'test_input.json'
 
+
 class MyTestCase(unittest.TestCase):
     """Class to test import functions"""
 
@@ -17,32 +18,32 @@ class MyTestCase(unittest.TestCase):
         test_input = Input.parse_instructions_file(INPUT_FILE_PATH)
         expected_dict = {
           "Train": {
-            "dataset" : "coco8-seg.yaml",
-            "settings" : {
-              "model_architecture" : "yolo11n-seg",
-              "model_path" : ".",
-              "model_name" : "test_model",
-              "validation_name" : "test_validation",
-              "save_validation" : True
+            "dataset": "coco8-seg.yaml",
+            "settings": {
+              "model_architecture": "yolo11n-seg",
+              "model_path": ".",
+              "model_name": "test_model",
+              "validation_name": "test_validation",
+              "save_validation": True
             },
-            "hyperparameters" : {
-              "epochs" : 10,
-              "image_size" : 640,
-              "device" : "cpu",
-              "seed" : 16
+            "hyperparameters": {
+              "epochs": 10,
+              "image_size": 640,
+              "device": "cpu",
+              "seed": 16
             }
           },
-          "Usage" : {
-            "dataset" : "test_img.jpg",
-            "settings" : {
-              "model_path" : "some_path",
-              "yaml_path" : "some_path",
-              "output_path" : "some_path",
-              "save_output" : True
+          "Usage": {
+            "dataset": "test_img.jpg",
+            "settings": {
+              "model_path": "some_path",
+              "yaml_path": "some_path",
+              "output_path": "some_path",
+              "save_output": True
             },
-            "parameters" : {
-              "confidence_threshold" : 0.5,
-              "lesion_names" : ["elephant"]
+            "parameters": {
+              "confidence_threshold": 0.5,
+              "lesion_names": ["elephant"]
             }
           }
         }
@@ -64,20 +65,20 @@ class MyTestCase(unittest.TestCase):
         test_input = Input.parse_instructions_file(INPUT_FILE_PATH)
         test_dict = Input.format_training_instructions(test_input['Train'])
         expected_dict = {
-            "dataset" : "coco8-seg.yaml",
-            "settings" : {
-              "model_architecture" : "yolo11n-seg",
-              "model_path" : ".",
-              "model_name" : "test_model",
-              "validation_name" : "test_validation",
-              "save_validation" : True
+            "dataset": "coco8-seg.yaml",
+            "settings": {
+              "model_architecture": "yolo11n-seg",
+              "model_path": ".",
+              "model_name": "test_model",
+              "validation_name": "test_validation",
+              "save_validation": True
             },
-            "hyperparameters" : {
-              "epochs" : 10,
-              "batch_size" : 16,
-              "image_size" : 640,
-              "device" : "cpu",
-              "seed" : 16
+            "hyperparameters": {
+              "epochs": 10,
+              "batch_size": 16,
+              "image_size": 640,
+              "device": "cpu",
+              "seed": 16
             }
         }
         self.assertEqual(test_dict, expected_dict)
@@ -86,20 +87,21 @@ class MyTestCase(unittest.TestCase):
         """Tests if the usage instructions get formatted correctly"""
         test_input = Input.parse_instructions_file(INPUT_FILE_PATH)
         test_dict = Input.format_usage_instructions(test_input['Usage'])
-        expected_dict = {"dataset" : "test_img.jpg",
-            "settings" : {
-                "model_path" : "some_path",
-                "yaml_path" : "some_path",
-                "output_path" : "some_path",
-                "save_output" : True
-            },
-            "parameters" : {
-                "pixel_size" : 1,
-                "confidence_threshold" : 0.5,
-                "lesion_names" : ["elephant"]
-            }
-        }
+        expected_dict = {"dataset": "test_img.jpg",
+                         "settings": {
+                             "model_path": "some_path",
+                             "yaml_path": "some_path",
+                             "output_path": "some_path",
+                             "save_output": True
+                         },
+                         "parameters": {
+                             "pixel_size": 1,
+                             "confidence_threshold": 0.5,
+                             "lesion_names": ["elephant"]
+                         }
+                         }
         self.assertEqual(test_dict, expected_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

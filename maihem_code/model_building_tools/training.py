@@ -2,6 +2,7 @@
 
 from ultralytics import YOLO
 
+
 def train_model(dataset_path,
                 hyperparameters,
                 save_path,
@@ -31,20 +32,21 @@ def train_model(dataset_path,
     Returns
     -------
     Model metrics: ultralytics.utils.metrics.SegmentMetrics
-        Model metrics - only for unit testing purposes, model is saved automatically for further use
+        Model metrics - only for unit testing purposes,
+        model is saved automatically for further use
     """
 
-    #Initialise YOLO model
+    # Initialise YOLO model
     model = YOLO(model_architecture)
-    #Train the model
-    model.train(data = dataset_path,
-                epochs = hyperparameters['epochs'],
-                batch = hyperparameters['batch_size'],
-                imgsz = hyperparameters['image_size'],
-                device = hyperparameters['device'],
-                seed = hyperparameters['seed'],
-                name = save_name,
-                project = save_path,
+    # Train the model
+    model.train(data=dataset_path,
+                epochs=hyperparameters['epochs'],
+                batch=hyperparameters['batch_size'],
+                imgsz=hyperparameters['image_size'],
+                device=hyperparameters['device'],
+                seed=hyperparameters['seed'],
+                name=save_name,
+                project=save_path,
                 )
 
     print(f"Training completed. Model saved to {save_name}.pt")

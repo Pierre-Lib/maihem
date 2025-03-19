@@ -2,9 +2,10 @@
 
 from ultralytics import YOLO
 
+
 def validate_model(model_path, save_path, save_name, save_tf):
     """Runs validation on the previously trained model and outputs metrics
-    Only the path to the trained model is needed, other arguments are remembered
+    Only the path to the trained model is needed, other args are remembered.
     For now, default validation metrics are used
 
     Parameters
@@ -22,19 +23,24 @@ def validate_model(model_path, save_path, save_name, save_tf):
     -------
     metrics : dict
         Dictionary of validation metrics including mean average precision (mAP)
-        for both boxes and segmentation at various intersection over union (IoU)
-        thresholds.
+        for both boxes and segmentation at various intersection over
+         union (IoU) thresholds.
     """
 
     model = YOLO(model_path)
 
-    validation = model.val(plots = True, project = save_path, name = save_name, save_json = save_tf)
+    validation = model.val(
+        plots=True,
+        project=save_path,
+        name=save_name,
+        save_json=save_tf
+    )
 
-    metrics = {'map50-95_box' : validation.box.map,
+    metrics = {'map50-95_box': validation.box.map,
                'map50_box': validation.box.map50,
-               'map75_box' : validation.box.map75,
-               'map50-95_seg' : validation.seg.map,
-               'map50_seg' : validation.seg.map50,
-               'map75_seg' : validation.seg.map75}
+               'map75_box': validation.box.map75,
+               'map50-95_seg': validation.seg.map,
+               'map50_seg': validation.seg.map50,
+               'map75_seg': validation.seg.map75}
 
     return metrics

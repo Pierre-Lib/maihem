@@ -31,7 +31,7 @@ def model_training_and_validation(training_instructions):
         Dictionary of bounding box and segmentation validation metrics
     """
 
-    #Assign values
+    # Assign values
     data_path = training_instructions['dataset']
     model_hyperparameters = training_instructions['hyperparameters']
     saving_path = training_instructions['settings']['model_path']
@@ -40,31 +40,37 @@ def model_training_and_validation(training_instructions):
     saving_validation = training_instructions['settings']['validation_name']
     save_tf = training_instructions['settings']['save_validation']
 
-    #Train the model
-    print(f"Commencing model training for {model_hyperparameters['epochs']} epochs")
-    train_model(dataset_path = data_path,
-                hyperparameters = model_hyperparameters,
-                save_path = saving_path,
-                save_name = saving_name,
-                model_architecture = model_arch
+    # Train the model
+    print(f"Commencing model training for"
+          f" {model_hyperparameters['epochs']} epochs")
+    train_model(dataset_path=data_path,
+                hyperparameters=model_hyperparameters,
+                save_path=saving_path,
+                save_name=saving_name,
+                model_architecture=model_arch
                 )
 
-    #Validating the model
+    # Validating the model
     print(f"Model training completed. Model weights save in\n"
-          f"{saving_path}/{saving_name}/weights/best.pt\nCommencing model validation")
-    validation_metrics = validate_model(model_path = f'{saving_path}/{saving_name}/weights/best.pt',
-                                        save_path = f'{saving_path}/{saving_name}/Validation',
-                                        save_name = saving_validation,
-                                        save_tf = save_tf)
+          f"{saving_path}/{saving_name}/weights/best.pt\n"
+          f"Commencing model validation")
+    validation_metrics = validate_model(
+        model_path=f'{saving_path}/{saving_name}/weights/best.pt',
+        save_path=f'{saving_path}/{saving_name}/Validation',
+        save_name=saving_validation,
+        save_tf=save_tf
+    )
 
     print(f"Model validation metrics saved in\n"
-          f"{saving_path}/{saving_name}/Validation/{saving_validation}/metrics.json")
+          f"{saving_path}/{saving_name}/Validation/"
+          f"{saving_validation}/metrics.json")
     return validation_metrics
 
 
 def detections_and_calculations(usage_instructions):
-    """A function to detect objects in one or more images, and calculate the total number
-    of objects and summed area of these objects for each specified object class.
+    """A function to detect objects in one or more images,
+    and calculate the total number of objects and summed area
+    of these objects for each specified object class.
 
     Parameters
     ----------
@@ -81,10 +87,11 @@ def detections_and_calculations(usage_instructions):
     Returns
     -------
     complete_measures_dict : dict
-        Dictionary of all the detections, their number and total area for each image
+        Dictionary of all the detections, their number and
+         total area for each image
     """
 
-    #Assign values
+    # Assign values
     path_to_model = usage_instructions['settings']['model_path']
     path_to_data = usage_instructions['dataset']
     path_to_yaml = usage_instructions['settings']['yaml_path']
@@ -93,21 +100,25 @@ def detections_and_calculations(usage_instructions):
     lesion_names = usage_instructions['parameters']['lesion_names']
     pixel_size = usage_instructions['parameters']['pixel_size']
 
-    detections = detection_segmentation(model_path = path_to_model,
-                                        image_path = path_to_data,
-                                        save_path = saving_path,
-                                        conf_threshold = confidence_threshold)
+    detections = detection_segmentation(model_path=path_to_model,
+                                        image_path=path_to_data,
+                                        save_path=saving_path,
+                                        conf_threshold=confidence_threshold)
 
     measure_calculator = MeasuresCalculations(detections)
     class_names = measure_calculator.get_class_names(path_to_yaml)
     complete_measures_dict = {}
     for lesion in lesion_names:
-        lesion_count = measure_calculator.total_number_of_occurrences(class_names, lesion)
-        total_lesion_area = measure_calculator.sum_areas_of_class(class_names, lesion, pixel_size)
-        lesion_measures = merge_detection_measures(lesion_count, total_lesion_area)
+        lesion_count = measure_calculator.total_number_of_occurrences(
+            class_names, lesion)
+        total_lesion_area = measure_calculator.sum_areas_of_class(
+            class_names, lesion, pixel_size)
+        lesion_measures = merge_detection_measures(
+            lesion_count, total_lesion_area)
         complete_measures_dict[lesion] = lesion_measures
 
-    with open(f'{saving_path}/predict/measures.json', 'w', encoding = 'utf-8') as outfile:
-        json.dump(complete_measures_dict, outfile, indent = 4)
+    with open(f'{saving_path}/predict/measures.json',
+              'w', encoding='utf-8') as outfile:
+        json.dump(complete_measures_dict, outfile, indent=4)
 
     return complete_measures_dict

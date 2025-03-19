@@ -13,20 +13,21 @@ THIS_DIR = Path(__file__).parent
 MODEL_PATH = TESTS_DIR / 'model_building_tests' / 'model_for_tests' / 'weights'
 
 sample_detections = detection_segmentation(
-    model_path = MODEL_PATH / 'best.pt',
-    image_path = TESTS_DIR / 'test_img.jpg',
-    save_path = THIS_DIR / 'test_predictions',
-    conf_threshold = 0.25
+    model_path=MODEL_PATH / 'best.pt',
+    image_path=TESTS_DIR / 'test_img.jpg',
+    save_path=THIS_DIR / 'test_predictions',
+    conf_threshold=0.25
 )
 
-#prepare some data to be used by multiple tests
+# prepare some data to be used by multiple tests
 test_metrics = MeasuresCalculations(sample_detections)
 test_class_names = MeasuresCalculations.get_class_names(
-    yaml_file_path = TESTS_DIR / 'coco8-seg_test.yaml')
+    yaml_file_path=TESTS_DIR / 'coco8-seg_test.yaml')
 
 test_image = cv2.imread(TESTS_DIR / 'test_img.jpg')
 test_image_dimensions = test_image.shape
 shutil.rmtree(THIS_DIR / 'test_predictions')
+
 
 class MyTestCase(unittest.TestCase):
     """Class to test measurement calculation functions"""
@@ -35,34 +36,51 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(len(test_metrics.detections[0]), 3)
 
     def test_get_class_names(self):
-        """Checks that the function gets the correct IDs : names combinations"""
+        """Checks that the function gets the correct IDs: names combinations"""
         self.assertEqual(test_class_names[16], 'dog')
         self.assertEqual(test_class_names[53], 'pizza')
 
     def test_get_specific_class_id(self):
-        """Checks that the function correctly identifies the class ID from its name"""
-        test_id = MeasuresCalculations.get_specific_class_id(test_class_names, 'moose')
+        """Checks that the function correctly identifies
+         the class ID from its name"""
+        test_id = MeasuresCalculations.get_specific_class_id(
+            test_class_names,
+            'moose'
+        )
         self.assertEqual(test_id, 47)
 
     def test_calculate_area(self):
-        """Checks that the function correctly calculates the area of a detection"""
+        """Checks that the function correctly calculates
+         the area of a detection"""
         test_mask = test_metrics.detections[0].masks.data[2]
-        test_area = MeasuresCalculations.calculate_area(test_mask, test_image_dimensions, 1)
+        test_area = MeasuresCalculations.calculate_area(
+            test_mask,
+            test_image_dimensions,
+            1
+        )
         expected_area = 4723.0177001953125
         self.assertAlmostEqual(test_area, expected_area, 1)
 
     def test_calculate_sum_areas_of_class(self):
-        """Checks that the function correctly calculates the sum of areas for a given class"""
-        test_sum_of_areas = test_metrics.sum_areas_of_class(test_class_names, 'elephant', 1)
+        """Checks that the function correctly calculates the sum of areas for
+         a given class"""
+        test_sum_of_areas = test_metrics.sum_areas_of_class(
+            test_class_names,
+            'elephant',
+            1
+        )
         expected_sum_of_areas = 21756.364379882812
-        self.assertAlmostEqual(test_sum_of_areas['test_img.jpg'], expected_sum_of_areas, 1)
+        self.assertAlmostEqual(test_sum_of_areas['test_img.jpg'],
+                               expected_sum_of_areas, 1)
 
     def test_total_number_of_occurrences(self):
-        """Checks that the functions correctly counts the number of occurrences of a given class"""
-        test_sum_of_occurrences = test_metrics.total_number_of_occurrences(test_class_names,
-                                                                           'elephant')
-        self.assertEqual(test_sum_of_occurrences['test_img.jpg'],2)
-
+        """Checks that the functions correctly counts the number
+         of occurrences of a given class"""
+        test_sum_of_occurrences = test_metrics.total_number_of_occurrences(
+            test_class_names,
+            'elephant'
+        )
+        self.assertEqual(test_sum_of_occurrences['test_img.jpg'], 2)
 
 
 if __name__ == '__main__':
