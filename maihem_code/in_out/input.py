@@ -103,6 +103,7 @@ class Input:
         replaces them with default values
 
         Parameters
+        ----------
         train_instructions: dict
             Dictionary of inputted training instructions
 
@@ -112,6 +113,7 @@ class Input:
             Dictionary with complete training instructions,
             after merging the inputted and default instructions
         """
+
         default_settings = {'model_architecture' : 'yolo11n-seg',
                             'model_path' : '.',
                             'model_name' : f'model_created_'
@@ -126,21 +128,10 @@ class Input:
                                   'device' : 'cpu',
                                   'seed' : random.randint(0, 1000)
                                    }
-        complete_training_instructions = {}
-        complete_training_instructions['dataset'] = train_instructions['dataset']
-        if 'settings' not in train_instructions:
-            complete_training_instructions['settings'] = default_settings
-        else:
-            complete_training_instructions['settings'] = {
-                key: train_instructions['settings'].get(key, default) for
-                key, default in default_settings.items()}
-
-        if 'hyperparameters' not in train_instructions:
-            complete_training_instructions['hyperparameters'] = default_hyperparameters
-        else:
-            complete_training_instructions['hyperparameters'] = {
-                key: train_instructions['hyperparameters'].get(key, default) for
-                key, default in default_hyperparameters.items()}
+        complete_training_instructions = {'dataset': train_instructions['dataset'],
+                                          'settings': {**default_settings, **train_instructions['settings']},
+                                          'hyperparameters': {**default_hyperparameters,
+                                                              **train_instructions['hyperparameters']}}
 
         return complete_training_instructions
 
@@ -149,18 +140,20 @@ class Input:
     @staticmethod
     def format_usage_instructions(usage_instructions):
         """Formats the usage instructions into a dictionary. If some instructions are missing,
-                replaces them with default values
+        replaces them with default values
 
-                Parameters
-                usage_instructions: dict
-                    Dictionary of inputted usage instructions
+        Parameters
+        ----------
+        usage_instructions: dict
+            Dictionary of inputted usage instructions
 
-                Returns
-                -------
-                complete_usage_instructions: dict
-                    Dictionary with complete usage instructions,
-                    after merging the inputted and default instructions
-                """
+        Returns
+        -------
+        complete_usage_instructions: dict
+            Dictionary with complete usage instructions,
+            after merging the inputted and default instructions
+        """
+
         default_settings = {'model_path' : 'wrong_path',
                             'yaml_path' : 'wrong_path',
                             'output_path' : '.',
@@ -170,19 +163,8 @@ class Input:
                               'pixel_size' : 1,
                               'lesion_names' : ['not right']
                               }
-        complete_usage_instructions = {}
-        complete_usage_instructions['dataset'] = usage_instructions['dataset']
-        if 'settings' not in usage_instructions:
-            complete_usage_instructions['settings'] = default_settings
-        else:
-            complete_usage_instructions['settings'] = {
-                key: usage_instructions['settings'].get(key, default) for
-                key, default in default_settings.items()}
+        complete_usage_instructions = {'dataset': usage_instructions['dataset'],
+                                       'settings' : {**default_settings, **usage_instructions['settings']},
+                                       'parameters' : {**default_parameters, **usage_instructions['parameters']},}
 
-        if 'parameters' not in usage_instructions:
-            complete_usage_instructions['parameters'] = default_parameters
-        else:
-            complete_usage_instructions['parameters'] = {
-                key: usage_instructions['parameters'].get(key, default) for
-                key, default in default_parameters.items()}
         return complete_usage_instructions
