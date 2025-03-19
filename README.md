@@ -5,6 +5,8 @@ Installation:
 ----------------------------------------------------------------
 git clone https://github.com/Pierre-Lib/maihem.git
 
+cd maihem
+
 pip install .
 
 Run unit tests (requires pytest):
