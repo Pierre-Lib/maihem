@@ -15,6 +15,8 @@ def validate_model(model_path, save_path, save_name, save):
         Path to save validation metrics
     save_name : str
         Name to save validation metrics
+    save : bool
+        Whether to save validation metrics
 
     Returns
     -------
