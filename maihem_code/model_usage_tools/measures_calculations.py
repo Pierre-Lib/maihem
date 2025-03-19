@@ -17,16 +17,15 @@ class MeasuresCalculations:
 
     Methods
     -------
-    get_class_names
+    get_class_names(yaml_file_path)
         Gets a dictionary matching the class IDs available in results to actual class names
-    get_specific_class_id
+    get_specific_class_id(class_names, specific_class_name)
         Gets the class ID corresponding to the specified class name
-    calculate_area
+    calculate_area(mask, image_dimensions, pixel_size)
         Calculates the area of a specific mask, and converts it to real units
-         if the pixel conversion ratio was specified
-    sum_areas_of_class
+    sum_areas_of_class(self, class_names, specific_class_name, pixel_size)
         Calculates the total area of all detections of a specific class in each image
-    total_number_of_occurrences:
+    total_number_of_occurrences(self, class_names, specific_class_name)
         Calculates the total number of detections of a specific class in each image
     """
 
@@ -41,7 +40,8 @@ class MeasuresCalculations:
 
     @staticmethod
     def get_class_names(yaml_file_path):
-        """
+        """Gets a dictionary matching the class IDs available in results to actual class names
+
         Parameters
         ----------
         yaml_file_path : str
@@ -59,7 +59,8 @@ class MeasuresCalculations:
 
     @staticmethod
     def get_specific_class_id(class_names, specific_class_name):
-        """
+        """Gets the class ID corresponding to the specified class name
+
         Parameters
         ----------
         class_names : dict
@@ -78,7 +79,8 @@ class MeasuresCalculations:
 
     @staticmethod
     def calculate_area(mask, image_dimensions, pixel_size):
-        """
+        """Calculates the area of a specific mask, and converts it to real units
+
         Parameters
         ----------
         mask : ultralytics.engine.results.mask
@@ -100,7 +102,8 @@ class MeasuresCalculations:
         return actual_area
 
     def sum_areas_of_class(self, class_names, specific_class_name, pixel_size):
-        """
+        """Calculates the total area of all detections of a specific class in each image
+
         Parameters
         ----------
         class_names : dict
@@ -135,7 +138,8 @@ class MeasuresCalculations:
         return class_area_dict
 
     def total_number_of_occurrences(self, class_names, specific_class_name):
-        """
+        """Calculates the total number of detections of a specific class in each image
+
         Parameters
         ----------
         class_names : dict

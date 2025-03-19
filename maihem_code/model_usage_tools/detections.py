@@ -2,7 +2,6 @@
 and creates a file with segmentation data for further quantitative analysis"""
 
 import json
-
 from ultralytics import YOLO
 
 def detection_segmentation(model_path, image_path, save_path, conf_threshold):
