@@ -132,11 +132,11 @@ class Input:
         complete_training_instructions = {'dataset': training_instructions['dataset'],
                                           'settings': {
                                               **default_settings,
-                                              **training_instructions['settings']
+                                              **training_instructions.get('settings', {})
                                           },
                                           'hyperparameters': {
                                               **default_hyperparameters,
-                                              **training_instructions['hyperparameters']
+                                              **training_instructions.get('hyperparameters', {})
                                           }}
 
         return complete_training_instructions
@@ -172,11 +172,11 @@ class Input:
         complete_usage_instructions = {'dataset': usage_instructions['dataset'],
                                        'settings' : {
                                            **default_settings,
-                                           **usage_instructions['settings']
+                                           **usage_instructions.get('settings', {})
                                        },
                                        'parameters' : {
                                            **default_parameters,
-                                           **usage_instructions['parameters']
+                                           **usage_instructions.get('parameters', {})
                                        }}
 
         return complete_usage_instructions

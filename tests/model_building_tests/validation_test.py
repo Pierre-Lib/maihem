@@ -1,6 +1,7 @@
 """Tests for the validation functions"""
 
 import unittest
+import shutil
 from pathlib import Path
 
 from maihem_code.model_building_tools.validation import validate_model
@@ -22,6 +23,8 @@ class MyTestCase(unittest.TestCase):
         expected_map75_seg = 0.5280599808858971
         self.assertAlmostEqual(test_map75_box, expected_map75_box, 3)
         self.assertAlmostEqual(test_map75_seg, expected_map75_seg, 3)
+        shutil.rmtree(TEST_DIR / 'Validation')
+        print("All saved directories removed")
 
 
 if __name__ == '__main__':

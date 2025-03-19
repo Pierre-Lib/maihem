@@ -1,9 +1,10 @@
 """Tests for the measurement calculations"""
 
 import unittest
+import shutil
 from pathlib import Path
 import cv2
-
+from setuptools.compat.py311 import shutil_rmtree
 
 from maihem_code.model_usage_tools.detections import detection_segmentation
 from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
@@ -26,6 +27,7 @@ test_class_names = MeasuresCalculations.get_class_names(
 
 test_image = cv2.imread(TESTS_DIR / 'test_img.jpg')
 test_image_dimensions = test_image.shape
+shutil.rmtree(THIS_DIR / 'test_predictions')
 
 class MyTestCase(unittest.TestCase):
     """Class to test measurement calculation functions"""

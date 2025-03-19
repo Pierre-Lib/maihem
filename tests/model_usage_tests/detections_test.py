@@ -1,5 +1,6 @@
 """Tests for detection functions"""
 import unittest
+import shutil
 from pathlib import Path
 
 from maihem_code.model_usage_tools.detections import detection_segmentation
@@ -30,6 +31,8 @@ class MyTestCase(unittest.TestCase):
 
         self.assertEqual(test_dict['class'], expected_dict['class'])
         self.assertAlmostEqual(test_dict['box_0'], expected_dict['box_0'], 1)
+        shutil.rmtree(THIS_DIR / 'test_predictions')
+        print("All saved directories removed")
 
 
 if __name__ == '__main__':

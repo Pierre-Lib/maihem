@@ -1,6 +1,7 @@
 """Tests for the package backbone"""
 
 import unittest
+import shutil
 from pathlib import Path
 
 from maihem_code.backbone.run_functions import (model_training_and_validation,
@@ -53,6 +54,8 @@ class MyTestCase(unittest.TestCase):
         expected_map75_seg = 0.5277204962825915
         self.assertAlmostEqual(test_bin_metrics['map50_box'], expected_map50_box, 3)
         self.assertAlmostEqual(test_bin_metrics['map75_seg'], expected_map75_seg, 3)
+        shutil.rmtree('test_model')
+        print("All saved directories removed")
 
     def test_detections_and_calculations(self):
         """Tests the detection and measurement calculations functions.
@@ -65,7 +68,12 @@ class MyTestCase(unittest.TestCase):
                            'elephant':
                                {'test_img.jpg': {'count': 2, 'total area': 21790.920776367188}}}
         self.assertAlmostEqual(test_merged_detection_metrics, expected_output, 5)
+        shutil.rmtree('predict')
+        print("All saved directories removed")
 
 
 if __name__ == '__main__':
     unittest.main()
+
+
+
