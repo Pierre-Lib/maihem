@@ -13,12 +13,12 @@ pytest tests/
 
 Run example:
 ------------
-cd example
+cd example\
 python maihem_example.py
 
 OR
 
-cd example
+cd example\
 maihem -i example_input.json
 
 

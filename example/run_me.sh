@@ -1,4 +1,6 @@
-python maihem_example.py
+maihem -i example_input.json
 
-rm -r predict test_model
+maihem
+
+
 

@@ -38,6 +38,8 @@ def entry_point():
     input_file = parse_input_file()
     if input_file:
         maihem_main(input_file)
+    else:
+        print("No input file provided; ending run")
     bye_world()
 
 

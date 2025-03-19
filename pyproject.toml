@@ -24,7 +24,7 @@ classifiers = []
 Homepage = 'https://github.com/Pierre-Lib/maihem'
 
 [project.scripts]
-maihem = 'maihem.bin.bin:entry_point'
+maihem = 'maihem_code.bin.bin:entry_point'
 
 [project.gui-scripts]
-maihem = 'maihem.bin.bin:entry_point'
+maihem = 'maihem_code.bin.bin:entry_point'
