@@ -1,0 +1,18 @@
+{
+  "Usage": {
+    "dataset": "example_pictures",
+    "settings": {
+      "model_path": "./example_model/weights/best.pt",
+      "yaml_path": "coco8-seg.yaml",
+      "output_path": ".",
+      "save_output": true
+    },
+    "parameters": {
+      "confidence_threshold": 0.5,
+      "lesion_names": [
+        "dog",
+        "cat"
+      ]
+    }
+  }
+}

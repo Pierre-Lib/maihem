@@ -1,0 +1,18 @@
+{
+  "Train": {
+    "dataset": "coco8-seg.yaml",
+    "settings": {
+      "model_architecture": "yolo11n-seg",
+      "model_path": ".",
+      "model_name": "test_model",
+      "validation_name": "test_validation",
+      "save_validation": true
+    },
+    "hyperparameters": {
+      "epochs": 10,
+      "image_size": 640,
+      "device": "cpu",
+      "seed": 16
+    }
+  }
+}

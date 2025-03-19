@@ -4,7 +4,7 @@ from pathlib import Path
 import shutil
 
 PATH_TO_HERE = Path(__file__).parent
-PATH_TO_INPUT = PATH_TO_HERE / 'example_input.json'
+PATH_TO_INPUT = PATH_TO_HERE / 'example_4_input.json'
 
 if Path.exists(PATH_TO_HERE / 'test_model'):
     shutil.rmtree('test_model')
