@@ -7,7 +7,7 @@ name = 'maihem'
 version = '0.1.1'
 description = "A package for YOLO-based segmentation and analysis"
 readme = 'README.md'
-license = { text = 'MIT'}
+license = 'MIT'
 authors = [
     {name = 'Pierre Liboureau', email = 'pierre.e.liboureau@uis.no'}
 ]

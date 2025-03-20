@@ -1,10 +1,8 @@
 """Tests for the measurement calculations"""
-
 import unittest
 import shutil
 from pathlib import Path
 import cv2
-
 from maihem_code.model_usage_tools.detections import detection_segmentation
 from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
 
