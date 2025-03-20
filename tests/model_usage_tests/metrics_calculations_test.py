@@ -8,10 +8,9 @@ from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculat
 
 TESTS_DIR = Path(__file__).parent.parent
 THIS_DIR = Path(__file__).parent
-MODEL_PATH = TESTS_DIR / 'model_building_tests'
 
 sample_detections = detection_segmentation(
-    model_path=MODEL_PATH / 'yolo11n-seg.pt',
+    model_path=TESTS_DIR / 'yolo11n-seg.pt',
     image_path=TESTS_DIR / 'test_img.jpg',
     save_path=THIS_DIR / 'test_predictions',
     conf_threshold=0.25

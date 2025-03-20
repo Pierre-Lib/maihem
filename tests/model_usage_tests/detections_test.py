@@ -5,9 +5,9 @@ from pathlib import Path
 
 from maihem_code.model_usage_tools.detections import detection_segmentation
 
-TESTS_DIR = Path(__file__).parent.parent
 THIS_DIR = Path(__file__).parent
-MODEL_PATH = TESTS_DIR / 'model_building_tests' / 'model_for_tests' / 'weights'
+TESTS_DIR = THIS_DIR.parent
+
 
 
 class MyTestCase(unittest.TestCase):
@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):
         """tests that the class and one of the coordinates of a test detection
          are as expected"""
         test_detection = detection_segmentation(
-            model_path=MODEL_PATH / 'best.pt',
+            model_path=TESTS_DIR / 'yolo11n-seg.pt',
             image_path=TESTS_DIR / 'test_img.jpg',
             save_path=THIS_DIR / 'test_predictions',
             conf_threshold=0.25
@@ -29,7 +29,7 @@ class MyTestCase(unittest.TestCase):
         test_dict = {'class': class_id,
                      'box_0': bbox_0}
         expected_dict = {'class': 20,
-                         'box_0': 237.02441}
+                         'box_0': 241.86955}
 
         self.assertEqual(test_dict['class'], expected_dict['class'])
         self.assertAlmostEqual(test_dict['box_0'], expected_dict['box_0'], 1)
