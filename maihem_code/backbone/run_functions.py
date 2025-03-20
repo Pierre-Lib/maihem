@@ -1,7 +1,5 @@
 """Two functions for use of YOLO models in  environmental histopathology"""
-
 import json
-
 from maihem_code.in_out.output import merge_detection_measures
 from maihem_code.model_building_tools.training import train_model
 from maihem_code.model_building_tools.validation import validate_model

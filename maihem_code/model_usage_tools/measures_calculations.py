@@ -1,5 +1,4 @@
-"""A class which takes raw segmentation results and
-calculates various measures"""
+"""A class which takes raw segmentation results and calculates measures"""
 import yaml
 import cv2
 import numpy

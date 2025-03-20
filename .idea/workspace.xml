@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/backbone_tests/run_functions_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/backbone_tests/run_functions_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/training_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model_building_tests/training_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +105,7 @@
       <workItem from="1741096717235" duration="1397000" />
       <workItem from="1742293965298" duration="27657000" />
       <workItem from="1742412739519" duration="42000" />
-      <workItem from="1742453223292" duration="2012000" />
+      <workItem from="1742453223292" duration="2803000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -453,7 +451,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742453853342</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1742456202501</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1742456202501</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
