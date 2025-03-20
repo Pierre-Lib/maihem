@@ -9,7 +9,6 @@ THIS_DIR = Path(__file__).parent
 TESTS_DIR = THIS_DIR.parent
 
 
-
 class MyTestCase(unittest.TestCase):
     """Class to test detection functions"""
     def test_detections(self):
