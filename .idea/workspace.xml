@@ -6,7 +6,29 @@
   <component name="ChangeListManager">
     <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/model_usage_tests/metrics_calculations_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model_usage_tests/metrics_calculations_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/BoxF1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/BoxPR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/BoxP_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/BoxR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/MaskF1_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/MaskPR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/MaskP_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/MaskR_curve.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/args.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/confusion_matrix.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/confusion_matrix_normalized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/labels_correlogram.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/results.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/results.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/train_batch0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/train_batch1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/train_batch2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/val_batch0_labels.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/val_batch0_pred.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/weights/best.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/model_for_tests/weights/last.pt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/validation_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model_building_tests/validation_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +128,7 @@
       <workItem from="1741096717235" duration="1397000" />
       <workItem from="1742293965298" duration="27657000" />
       <workItem from="1742412739519" duration="42000" />
-      <workItem from="1742453223292" duration="3415000" />
+      <workItem from="1742453223292" duration="5099000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -468,7 +490,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742459763052</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1742460483090</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1742460483090</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,6 +526,6 @@
     <SUITE FILE_PATH="coverage/maihem$temp.coverage" NAME="temp Coverage Results" MODIFIED="1742377344250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/in_out" />
     <SUITE FILE_PATH="coverage/maihem$maihem_example.coverage" NAME="maihem_example Coverage Results" MODIFIED="1742399527801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/example" />
     <SUITE FILE_PATH="coverage/maihem$detections.coverage" NAME="detections Coverage Results" MODIFIED="1738146759475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_usage" />
-    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1742455505334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/backbone_tests" />
+    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1742461711497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/model_building_tests" />
   </component>
 </project>
