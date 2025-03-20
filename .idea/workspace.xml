@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches" />
+    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/backbone_tests/run_functions_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/backbone_tests/run_functions_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/model_building_tests/training_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model_building_tests/training_test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,32 +46,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests in detections_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in input_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in maihem_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in metrics_calculations_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in output_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in run_functions_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in runner_tests.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in training_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in validation_test.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.detections.executor&quot;: &quot;Run&quot;,
-    &quot;Python.maihem_example.executor&quot;: &quot;Run&quot;,
-    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
-    &quot;Python.training.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Python&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests in detections_test.py.executor": "Run",
+    "Python tests.Python tests in input_test.py.executor": "Run",
+    "Python tests.Python tests in maihem_test.py.executor": "Run",
+    "Python tests.Python tests in metrics_calculations_test.py.executor": "Run",
+    "Python tests.Python tests in output_test.py.executor": "Run",
+    "Python tests.Python tests in run_functions_test.py.executor": "Run",
+    "Python tests.Python tests in runner_tests.py.executor": "Run",
+    "Python tests.Python tests in training_test.py.executor": "Run",
+    "Python tests.Python tests in validation_test.py.executor": "Run",
+    "Python.detections.executor": "Run",
+    "Python.maihem_example.executor": "Run",
+    "Python.temp.executor": "Run",
+    "Python.training.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/Users/pierreliboureau/Documents/Digital_histopathology/maihem/tests",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Python",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/tests" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -97,6 +107,7 @@
       <workItem from="1741096717235" duration="1397000" />
       <workItem from="1742293965298" duration="27657000" />
       <workItem from="1742412739519" duration="42000" />
+      <workItem from="1742453223292" duration="2012000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -434,7 +445,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742412778676</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1742453853342</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1742453853342</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,6 +481,6 @@
     <SUITE FILE_PATH="coverage/maihem$temp.coverage" NAME="temp Coverage Results" MODIFIED="1742377344250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/in_out" />
     <SUITE FILE_PATH="coverage/maihem$maihem_example.coverage" NAME="maihem_example Coverage Results" MODIFIED="1742399527801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/example" />
     <SUITE FILE_PATH="coverage/maihem$detections.coverage" NAME="detections Coverage Results" MODIFIED="1738146759475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_usage" />
-    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1742382280071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/backbone_tests" />
+    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1742455505334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/backbone_tests" />
   </component>
 </project>

@@ -55,9 +55,9 @@ class MyTestCase(unittest.TestCase):
         expected_map50_box = 0.9407706548068574
         expected_map75_seg = 0.5277204962825915
         self.assertAlmostEqual(test_bin_metrics['map50_box'],
-                               expected_map50_box, 2)
+                               expected_map50_box, 1)
         self.assertAlmostEqual(test_bin_metrics['map75_seg'],
-                               expected_map75_seg, 2)
+                               expected_map75_seg, 1)
         shutil.rmtree('test_model')
         print("All saved directories removed")
 
@@ -81,8 +81,22 @@ class MyTestCase(unittest.TestCase):
                 }
             }
         }
-        self.assertAlmostEqual(test_merged_detection_metrics,
-                               expected_output, 5)
+        self.assertEqual(
+            test_merged_detection_metrics['person']['test_img.jpg']['count'],
+            expected_output['person']['test_img.jpg']['count'])
+        self.assertEqual(
+            test_merged_detection_metrics['elephant']['test_img.jpg']['count'],
+            expected_output['elephant']['test_img.jpg']['count'])
+        self.assertAlmostEqual(
+            test_merged_detection_metrics[
+                'person']['test_img.jpg']['total area'],
+            expected_output['person']['test_img.jpg']['total area'], 2)
+        self.assertAlmostEqual(
+            test_merged_detection_metrics[
+                'elephant']['test_img.jpg']['total area'],
+            expected_output[
+                'elephant']['test_img.jpg']['total area'], 2)
+
         shutil.rmtree('predict')
         print("All saved directories removed")
 

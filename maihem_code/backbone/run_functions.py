@@ -96,7 +96,8 @@ def detections_and_calculations(usage_instructions):
     path_to_data = usage_instructions['dataset']
     path_to_yaml = usage_instructions['settings']['yaml_path']
     saving_path = usage_instructions['settings']['output_path']
-    confidence_threshold = usage_instructions['parameters']['confidence_threshold']
+    confidence_threshold = usage_instructions[
+        'parameters']['confidence_threshold']
     lesion_names = usage_instructions['parameters']['lesion_names']
     pixel_size = usage_instructions['parameters']['pixel_size']
 
