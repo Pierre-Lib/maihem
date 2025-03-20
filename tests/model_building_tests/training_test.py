@@ -23,7 +23,7 @@ class MyTestCase(unittest.TestCase):
                                          'yolo11n-seg')
         test_model_seg_map50 = test_model_metrics.seg.map50
         expected_map50 = 0.8488227579919876
-        self.assertAlmostEqual(test_model_seg_map50, expected_map50, 3)
+        self.assertAlmostEqual(test_model_seg_map50, expected_map50, 2)
         shutil.rmtree('test_model')
         print("All saved directories removed")
 

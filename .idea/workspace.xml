@@ -42,32 +42,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests in detections_test.py.executor": "Run",
-    "Python tests.Python tests in input_test.py.executor": "Run",
-    "Python tests.Python tests in maihem_test.py.executor": "Run",
-    "Python tests.Python tests in metrics_calculations_test.py.executor": "Run",
-    "Python tests.Python tests in output_test.py.executor": "Run",
-    "Python tests.Python tests in run_functions_test.py.executor": "Run",
-    "Python tests.Python tests in runner_tests.py.executor": "Run",
-    "Python tests.Python tests in training_test.py.executor": "Run",
-    "Python tests.Python tests in validation_test.py.executor": "Run",
-    "Python.detections.executor": "Run",
-    "Python.maihem_example.executor": "Run",
-    "Python.temp.executor": "Run",
-    "Python.training.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Python",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests in detections_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in input_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in maihem_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in metrics_calculations_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in output_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in run_functions_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in runner_tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in training_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in validation_test.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detections.executor&quot;: &quot;Run&quot;,
+    &quot;Python.maihem_example.executor&quot;: &quot;Run&quot;,
+    &quot;Python.temp.executor&quot;: &quot;Run&quot;,
+    &quot;Python.training.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Python&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -96,6 +96,7 @@
       <workItem from="1740566719747" duration="2888000" />
       <workItem from="1741096717235" duration="1397000" />
       <workItem from="1742293965298" duration="27657000" />
+      <workItem from="1742412739519" duration="42000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -425,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742412599436</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1742412778675</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1742412778676</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
