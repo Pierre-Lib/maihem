@@ -8,10 +8,10 @@ from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculat
 
 TESTS_DIR = Path(__file__).parent.parent
 THIS_DIR = Path(__file__).parent
-MODEL_PATH = TESTS_DIR / 'model_building_tests' / 'model_for_tests' / 'weights'
+MODEL_PATH = TESTS_DIR / 'model_building_tests'
 
 sample_detections = detection_segmentation(
-    model_path=MODEL_PATH / 'best.pt',
+    model_path=MODEL_PATH / 'yolo11n-seg.pt',
     image_path=TESTS_DIR / 'test_img.jpg',
     save_path=THIS_DIR / 'test_predictions',
     conf_threshold=0.25
@@ -56,7 +56,7 @@ class MyTestCase(unittest.TestCase):
             test_image_dimensions,
             1
         )
-        expected_area = 4723.0177001953125
+        expected_area = 4838.3236083984375
         self.assertAlmostEqual(test_area, expected_area, 1)
 
     def test_calculate_sum_areas_of_class(self):
@@ -67,7 +67,7 @@ class MyTestCase(unittest.TestCase):
             'elephant',
             1
         )
-        expected_sum_of_areas = 21756.364379882812
+        expected_sum_of_areas = 21790.920776367188
         self.assertAlmostEqual(test_sum_of_areas['test_img.jpg'],
                                expected_sum_of_areas, 1)
 
