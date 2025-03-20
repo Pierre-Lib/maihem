@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/model_usage_tests/detections_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model_usage_tests/detections_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/model_usage_tests/metrics_calculations_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/model_usage_tests/metrics_calculations_test.py" afterDir="false" />
-    </list>
+    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +103,7 @@
       <workItem from="1741096717235" duration="1397000" />
       <workItem from="1742293965298" duration="27657000" />
       <workItem from="1742412739519" duration="42000" />
-      <workItem from="1742453223292" duration="6483000" />
+      <workItem from="1742453223292" duration="6787000" />
     </task>
     <task id="LOCAL-00001" summary="new_package">
       <option name="closed" value="true" />
@@ -493,7 +489,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742462647710</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1742463316436</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1742463316436</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -521,6 +525,6 @@
     <SUITE FILE_PATH="coverage/maihem$temp.coverage" NAME="temp Coverage Results" MODIFIED="1742377344250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/in_out" />
     <SUITE FILE_PATH="coverage/maihem$maihem_example.coverage" NAME="maihem_example Coverage Results" MODIFIED="1742399527801" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/example" />
     <SUITE FILE_PATH="coverage/maihem$detections.coverage" NAME="detections Coverage Results" MODIFIED="1738146759475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/maihem_code/main/model_usage" />
-    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1742462630974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/model_usage_tests" />
+    <SUITE FILE_PATH="coverage/maihem$.coverage" NAME=" Coverage Results" MODIFIED="1742463301762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/model_usage_tests" />
   </component>
 </project>

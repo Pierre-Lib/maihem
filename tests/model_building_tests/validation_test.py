@@ -16,17 +16,18 @@ dummy_hyperparameters = {'epochs': 1,
                          'image_size': 640,
                          'device': 'cpu',
                          'seed': 1612}
-train_model('coco8-seg.yaml',
-            dummy_hyperparameters,
-            '.',
-            'dummy_model',
-            'yolo11n-seg')
+
 
 class MyTestCase(unittest.TestCase):
     """Class to test validation functions"""
     def test_validation(self):
         """Checks that the validation metrics are consistent for
          a same model and validation set"""
+        train_model('coco8-seg.yaml',
+                    dummy_hyperparameters,
+                    '.',
+                    'dummy_model',
+                    'yolo11n-seg')
         test_validation = validate_model(model_path=WEIGHTS_PATH / 'best.pt',
                                          save_path=TEST_DIR / 'Validation',
                                          save_name='test_validation',
