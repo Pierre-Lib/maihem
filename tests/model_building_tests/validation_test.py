@@ -39,7 +39,7 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(test_map75_box, expected_map75_box, 3)
         self.assertAlmostEqual(test_map75_seg, expected_map75_seg, 3)
         shutil.rmtree(TEST_DIR / 'Validation')
-        shutil.rmtree(TEST_DIR / 'dummy_model')
+        #shutil.rmtree(TEST_DIR / 'dummy_model')
         print("All saved directories removed")
 
 
