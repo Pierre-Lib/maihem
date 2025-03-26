@@ -1,17 +1,17 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Two functions for use of YOLO models in  environmental histopathology"""
+"""Two functions for use of YOLO models in  environmental histopathology."""
 import json
 from maihem_code.in_out.output import merge_detection_measures
 from maihem_code.model_building_tools.training import train_model
 from maihem_code.model_building_tools.validation import validate_model
 from maihem_code.model_usage_tools.detections import detection_segmentation
-from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
+from maihem_code.model_usage_tools.measures_calculations import (
+    MeasuresCalculations)
 
 
 def model_training_and_validation(training_instructions):
-    """A function to train a model, save it,
-     run a validation and output validation metrics.
+    """Train a model, save it, run validation and output validation metrics.
 
     Parameters
     ----------
@@ -30,7 +30,6 @@ def model_training_and_validation(training_instructions):
     validation_metrics : dict
         Dictionary of bounding box and segmentation validation metrics
     """
-
     # Assign values
     data_path = training_instructions['dataset']
     model_hyperparameters = training_instructions['hyperparameters']
@@ -68,7 +67,11 @@ def model_training_and_validation(training_instructions):
 
 
 def detections_and_calculations(usage_instructions):
-    """A function to detect objects in one or more images,
+    """Detect objects and calculate detection measures.
+
+    Description
+    -----------
+    A function to detect objects in one or more images,
     and calculate the total number of objects and summed area
     of these objects for each specified object class.
 
@@ -90,7 +93,6 @@ def detections_and_calculations(usage_instructions):
         Dictionary of all the detections, their number and
          total area for each image
     """
-
     # Assign values
     path_to_model = usage_instructions['settings']['model_path']
     path_to_data = usage_instructions['dataset']

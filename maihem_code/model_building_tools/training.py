@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""A function training a YOLO11 segmentation model """
+"""Train a YOLO11 segmentation model."""
 
 from ultralytics import YOLO
 
@@ -11,7 +11,7 @@ def train_model(dataset_path,
                 save_name,
                 model_architecture
                 ):
-    """Trains a YOLO11 segmentation model on a specified dataset
+    """Train a YOLO11 segmentation model on a specified dataset.
 
     Parameters
     ----------
@@ -37,7 +37,6 @@ def train_model(dataset_path,
         Model metrics - only for unit testing purposes,
         model is saved automatically for further use
     """
-
     # Initialise YOLO model
     model = YOLO(model_architecture)
     # Train the model

@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Tests for detection functions"""
+"""Tests for detection functions."""
 import unittest
 import shutil
 from pathlib import Path
@@ -10,12 +10,15 @@ from maihem_code.model_usage_tools.detections import detection_segmentation
 THIS_DIR = Path(__file__).parent
 TESTS_DIR = THIS_DIR.parent
 
+# Remove any vestigial folders that might mess up the tests
+if Path.exists(THIS_DIR / 'test_predictions'):
+    shutil.rmtree(THIS_DIR / 'test_predictions')
 
 class MyTestCase(unittest.TestCase):
-    """Class to test detection functions"""
+    """Class to test detection functions."""
+
     def test_detections(self):
-        """tests that the class and one of the coordinates of a test detection
-         are as expected"""
+        """Test that the detection function works."""
         test_detection = detection_segmentation(
             model_path=TESTS_DIR / 'yolo11n-seg.pt',
             image_path=TESTS_DIR / 'test_img.jpg',

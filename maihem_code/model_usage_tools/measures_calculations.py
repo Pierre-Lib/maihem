@@ -1,13 +1,16 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""A class which takes raw segmentation results and calculates measures"""
+"""A class which takes raw segmentation results and calculates measures."""
 import yaml
 import cv2
 import numpy
 
 
 class MeasuresCalculations:
-    """
+    """Use segmentation results to calculate metrics.
+
+    Description
+    -----------
     A class using raw segmentation results from a YOLO11 model to calculate
     the number and area of segmentations, and create heatmaps for them.
 
@@ -36,19 +39,24 @@ class MeasuresCalculations:
     """
 
     def __init__(self, detections):
-        """
+        """Initialise the class.
+
         Parameters
         ----------
         detections : list
             a list of segmentations from an image analysed by
-             a trained YOLO model
+            a trained YOLO model
         """
         self.detections = detections
 
     @staticmethod
     def get_class_names(yaml_file_path):
-        """Gets a dictionary matching the class IDs available in results
-         to actual class names
+        """Match class IDs and names.
+
+        Description
+        -----------
+        Gets a dictionary matching the class IDs available in results
+        to actual class names
 
         Parameters
         ----------
@@ -68,7 +76,7 @@ class MeasuresCalculations:
 
     @staticmethod
     def get_specific_class_id(all_class_names, specific_class_name):
-        """Gets the class ID corresponding to the specified class name
+        """Get the class ID corresponding to the specified class name.
 
         Parameters
         ----------
@@ -88,8 +96,7 @@ class MeasuresCalculations:
 
     @staticmethod
     def calculate_area(mask, image_dimensions, pixel_size):
-        """Calculates the area of a specific mask,
-         and converts it to real units
+        """Calculate the area of a specific mask, and convert it to real units.
 
         Parameters
         ----------
@@ -116,7 +123,11 @@ class MeasuresCalculations:
 
     def sum_areas_of_class(self, all_class_names,
                            specific_class_name, pixel_size):
-        """Calculates the total area of all detections of
+        """Calculate the total area of all detections of a specific class.
+
+        Description
+        -----------
+        Calculate the total area of all detections of
          a specific class in each image
 
         Parameters
@@ -161,8 +172,7 @@ class MeasuresCalculations:
 
     def total_number_of_occurrences(self,
                                     all_class_names, specific_class_name):
-        """Calculates the total number of detections of
-         a specific class in each image
+        """Calculate the total number of detections of a class in each image.
 
         Parameters
         ----------

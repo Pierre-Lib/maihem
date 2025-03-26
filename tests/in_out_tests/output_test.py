@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Tests the output function"""
+"""Test the output function."""
 
 import unittest
 
@@ -8,9 +8,10 @@ from maihem_code.in_out.output import merge_detection_measures
 
 
 class MyTestCase(unittest.TestCase):
-    """Class to test output functions"""
+    """Class to test output functions."""
+
     def test_merging_of_output_dictionaries(self):
-        """Tests that the merge_detection_measures function is working"""
+        """Test that the merge_detection_measures function is working."""
         test_count_dict = {"elephant": 3,
                            "tortoise": 5,
                            "otter": 7

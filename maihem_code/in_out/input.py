@@ -1,7 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""A class to take inputs from a file and format them for use by
- the functions in the package"""
+"""Take inputs from a file and format them."""
 
 import datetime
 import json
@@ -11,11 +10,7 @@ import yaml
 
 
 class Input:
-    """A class that takes inputs and formats them for use in other functions
-
-    ...
-    Attributes
-    ----------
+    """Take inputs and formats them for use in other functions.
 
     Methods
     -------
@@ -34,14 +29,11 @@ class Input:
     """
 
     def __init__(self):
-        """
-        Parameters
-        ----------
-        """
+        """Initialise the class."""
 
     @staticmethod
     def parse_instructions_file(input_file_path):
-        """Reads the instructions file into a dictionary
+        """Read the instructions file into a dictionary.
 
         Parameters
         ----------
@@ -60,7 +52,7 @@ class Input:
 
     @staticmethod
     def check_path(filepath):
-        """Checks if the provided path exists
+        """Check if the provided path exists.
 
         Parameters
         ----------
@@ -78,7 +70,7 @@ class Input:
 
     @staticmethod
     def check_lesion_names(lesion_names, yaml_file_path):
-        """Checks if the provided lesion names exist
+        """Check if the provided lesion names exist.
 
         Parameters
         ----------
@@ -92,7 +84,6 @@ class Input:
         ValueError
             If the lesion name cannot be found in the yaml file
         """
-
         with open(yaml_file_path, 'r', encoding='utf-8') as file:
             yaml_data = yaml.safe_load(file)
         class_names = yaml_data.get('names', {})
@@ -102,8 +93,11 @@ class Input:
 
     @staticmethod
     def format_training_instructions(training_instructions):
-        """Formats the training instructions into a dictionary.
-        If some instructions are missing, replaces them with default values
+        """Format the training instructions into a dictionary.
+
+        Description
+        -----------
+        If some instructions are missing, replace them with default values.
 
         Parameters
         ----------
@@ -116,7 +110,6 @@ class Input:
             Dictionary with complete training instructions,
             after merging the inputted and default instructions
         """
-
         default_settings = {'model_architecture': 'yolo11n-seg',
                             'model_path': '.',
                             'model_name': f'model_created_'
@@ -147,8 +140,11 @@ class Input:
 
     @staticmethod
     def format_usage_instructions(usage_instructions):
-        """Formats the usage instructions into a dictionary.
-        If some instructions are missing, replaces them with default values
+        """Format the usage instructions into a dictionary.
+
+        Description
+        -----------
+        If some instructions are missing, replace them with default values.
 
         Parameters
         ----------
@@ -161,7 +157,6 @@ class Input:
             Dictionary with complete usage instructions,
             after merging the inputted and default instructions
         """
-
         default_settings = {'model_path': 'wrong_path',
                             'yaml_path': 'wrong_path',
                             'output_path': '.',

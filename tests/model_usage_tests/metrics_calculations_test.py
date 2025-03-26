@@ -6,10 +6,15 @@ import shutil
 from pathlib import Path
 import cv2
 from maihem_code.model_usage_tools.detections import detection_segmentation
-from maihem_code.model_usage_tools.measures_calculations import MeasuresCalculations
+from maihem_code.model_usage_tools.measures_calculations import (
+    MeasuresCalculations)
 
 TESTS_DIR = Path(__file__).parent.parent
 THIS_DIR = Path(__file__).parent
+
+# Remove any vestigial folders that might mess up the tests
+if Path.exists(THIS_DIR / 'test_predictions'):
+    shutil.rmtree(THIS_DIR / 'test_predictions')
 
 sample_detections = detection_segmentation(
     model_path=TESTS_DIR / 'yolo11n-seg.pt',
@@ -29,19 +34,18 @@ shutil.rmtree(THIS_DIR / 'test_predictions')
 
 
 class MyTestCase(unittest.TestCase):
-    """Class to test measurement calculation functions"""
+    """Class to test measurement calculation functions."""
     def test_init(self):
-        """Checks that the detection results loaded correctly in the class"""
+        """Check that the detection results loaded correctly in the class."""
         self.assertEqual(len(test_metrics.detections[0]), 3)
 
     def test_get_class_names(self):
-        """Checks that the function gets the correct IDs: names combinations"""
+        """Check that the function gets the correct IDs: names combinations."""
         self.assertEqual(test_class_names[16], 'dog')
         self.assertEqual(test_class_names[53], 'pizza')
 
     def test_get_specific_class_id(self):
-        """Checks that the function correctly identifies
-         the class ID from its name"""
+        """Check that the function identifies the class ID from its name."""
         test_id = MeasuresCalculations.get_specific_class_id(
             test_class_names,
             'moose'
@@ -49,8 +53,7 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(test_id, 47)
 
     def test_calculate_area(self):
-        """Checks that the function correctly calculates
-         the area of a detection"""
+        """Check that the function calculates the area of a detection."""
         test_mask = test_metrics.detections[0].masks.data[2]
         test_area = MeasuresCalculations.calculate_area(
             test_mask,
@@ -61,8 +64,7 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(test_area, expected_area, 1)
 
     def test_calculate_sum_areas_of_class(self):
-        """Checks that the function correctly calculates the sum of areas for
-         a given class"""
+        """Check that the function correctly sums of areas."""
         test_sum_of_areas = test_metrics.sum_areas_of_class(
             test_class_names,
             'elephant',
@@ -73,8 +75,7 @@ class MyTestCase(unittest.TestCase):
                                expected_sum_of_areas, 1)
 
     def test_total_number_of_occurrences(self):
-        """Checks that the functions correctly counts the number
-         of occurrences of a given class"""
+        """Check that the functions counts the number of occurrences."""
         test_sum_of_occurrences = test_metrics.total_number_of_occurrences(
             test_class_names,
             'elephant'

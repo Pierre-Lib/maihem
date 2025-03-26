@@ -1,13 +1,12 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Goes through the input file instructions and uses them
- to perform the designated tasks"""
+"""Perform tasks specified in the input file instructions."""
 
 from maihem_code.core.runner import Runner
 
 
 def maihem_main(input_file=None):
-    """Function to execute the instructions from the input file
+    """Execute the instructions from the input file.
 
     Parameters
     ----------

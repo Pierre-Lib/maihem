@@ -1,14 +1,20 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""A function which uses the trained model to detect objects in a new image
-and creates a file with segmentation data for further quantitative analysis"""
+"""Detect and segment objects in images.
+
+Description
+-----------
+
+A function which uses the trained model to detect objects in a new image
+and creates a file with segmentation data for further quantitative analysis.
+"""
 
 import json
 from ultralytics import YOLO
 
 
 def detection_segmentation(model_path, image_path, save_path, conf_threshold):
-    """Use the trained model to detect and segment objects in a new image
+    """Use the trained model to detect and segment objects in a new image.
 
     Parameters
     ----------
@@ -27,7 +33,6 @@ def detection_segmentation(model_path, image_path, save_path, conf_threshold):
         A list of detections for each image analysed.
         Each image result is in format ultralytics.engine.results.Results
     """
-
     model = YOLO(model_path)
 
     detection_results = model.predict(source=image_path,

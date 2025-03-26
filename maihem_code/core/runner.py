@@ -1,7 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""A class to perform the various actions from the instruction file and
- run the program"""
+"""Perform the various actions from the instructions and run the program."""
 
 import json
 from maihem_code.in_out.input import Input
@@ -10,7 +9,7 @@ from maihem_code.backbone.run_functions import (model_training_and_validation,
 
 
 class Runner:
-    """A class with methods to run the different parts of the program
+    """A class with methods to run the different parts of the program.
 
     Attributes
     ----------
@@ -24,25 +23,26 @@ class Runner:
     Methods
     -------
     read_instructions()
-        Uses the input functions to read the instruction file into a dictionary
+        Read the instruction file into a dictionary using the input functions.
     check_instructions()
-        Checks what instructions are given and that the file paths and
-         lesion names exist
+        Check what instructions are given and that the file paths and
+        lesion names exist
     plan_training()
-        Formats the training instructions to be complete and
-         readable by the program
+        Format the training instructions to be complete and
+        readable by the program
     plan_usage()
-        Formats the usage instructions to be complete and
-         readable by the program
+        Format the usage instructions to be complete and
+        readable by the program
     execute_training()
-        If there are training instructions, runs the training functions
+        If there are training instructions, run the training functions
     execute_usage()
-        If there are usage instructions, runs the usage functions
-        """
+        If there are usage instructions, run the usage functions
+    """
 
     def __init__(self, input_file_path=None,
                  description="YOLO instructions"):
-        """
+        """Initialise the class.
+
         Parameters
         ----------
         input_file_path : str
@@ -55,14 +55,17 @@ class Runner:
         self.instructions = {}
 
     def read_instructions(self):
-        """Reads the instructions file into a dictionary"""
-
+        """Read the instructions file into a dictionary."""
         self.instructions = Input.parse_instructions_file(self.input_file)
 
     def check_instructions(self):
-        """Checks what instructions are given and that the file paths and
-         lesion names exist"""
+        """Check the instructions given.
 
+        Description
+        -----------
+        Check what instructions are given and that the file paths and
+        lesion names exist
+        """
         if 'Train' in self.instructions.keys():
             Input.check_path(self.instructions['Train']['dataset'])
         else:
@@ -83,30 +86,31 @@ class Runner:
             self.instructions['Usage'] = False
 
     def plan_training(self):
-        """Formats the training instructions to be complete and
-         readable by the program"""
+        """Format the training instructions to be complete."""
         if self.instructions['Train']:
             self.instructions['Train'] = (
                 Input.format_training_instructions(self.instructions['Train']))
 
     def plan_usage(self):
-        """Formats the usage instructions to be complete and
-         readable by the program"""
+        """Format the usage instructions to be complete."""
         if self.instructions['Usage']:
             self.instructions['Usage'] = Input.format_usage_instructions(
                 self.instructions['Usage']
             )
 
     def execute_training(self):
-        """If there are training instructions, runs the training functions
-        Also saves the complete training instructions used to a JSON file
+        """Run training instructions, if provided.
+
+        Description
+        -----------
+        If there are training instructions, runs the training functions.
+        Also saves the complete training instructions used to a JSON file.
 
         Returns
         -------
         training_summary : dict
             Dictionary with validation metrics after training
         """
-
         if not self.instructions["Train"]:
             no_training = "No training instructions; moving to model usage."
             return no_training
@@ -125,14 +129,19 @@ class Runner:
         return training_summary
 
     def execute_usage(self):
-        """If there are usage instructions, runs the usage functions
-        Also saves the complete usage instructions used to a JSON file
+        """Run usage instructions, if provided.
+
+        Description
+        -----------
+        If there are usage instructions, runs the usage functions.
+        Also saves the complete usage instructions used to a JSON file.
 
         Returns
         -------
         usage_measures : dict
             Dictionary of all the detections, their number and
-             total area for each image"""
+            total area for each image
+        """
         if not self.instructions["Usage"]:
             no_usage = "No usage instructions; saving results and ending run."
             return no_usage

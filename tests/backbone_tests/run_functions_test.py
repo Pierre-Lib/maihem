@@ -9,8 +9,16 @@ from pathlib import Path
 from maihem_code.backbone.run_functions import (model_training_and_validation,
                                                 detections_and_calculations)
 
+THIS_DIR = Path(__file__).parent
+TESTS_DIR = THIS_DIR.parent
 
-TESTS_DIR = Path(__file__).parent.parent
+
+# Remove any vestigial folders that might mess up the tests
+if Path.exists(THIS_DIR / 'test_model'):
+    shutil.rmtree('test_model')
+if Path.exists(THIS_DIR / 'predict'):
+    shutil.rmtree('predict')
+
 
 training_instructions = {"dataset": "coco8-seg.yaml",
                          "settings": {
@@ -47,12 +55,16 @@ usage_instructions = {
 
 
 class MyTestCase(unittest.TestCase):
-    """A class with test functions for the two
-     backbone functions of the package"""
+    """Test the backbone functions."""
 
     def test_training_and_validation(self):
-        """Tests the training and validation function. Checks that the
-         validation metrics are as expected for a specific model training."""
+        """Test the training and validation function.
+
+         Description
+         -----------
+         Check that the validation metrics are as expected
+         for a specific model training.
+         """
         test_bin_metrics = model_training_and_validation(training_instructions)
         expected_map50_box = 0.9407706548068574
         expected_map75_seg = 0.5277204962825915
@@ -64,9 +76,13 @@ class MyTestCase(unittest.TestCase):
         print("All saved directories removed")
 
     def test_detections_and_calculations(self):
-        """Tests the detection and measurement calculations functions.
-        Checks that the final dictionary of measurements obtained for the
-        test image is correct."""
+        """Test the detection and measurement calculations functions.
+
+        Description
+        -----------
+        Check that the final dictionary of measurements obtained for the
+        test image is correct.
+        """
         test_merged_detection_metrics = detections_and_calculations(
             usage_instructions
         )

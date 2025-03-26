@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Tests for the validation functions"""
+"""Tests for the validation functions."""
 
 import unittest
 import shutil
@@ -10,7 +10,12 @@ from maihem_code.model_building_tools.training import train_model
 from maihem_code.model_building_tools.validation import validate_model
 
 TEST_DIR = Path(__file__).parent
-WEIGHTS_PATH = TEST_DIR / 'dummy_model' / 'weights'
+
+# Remove any vestigial folders that might mess up the tests
+if Path.exists(TEST_DIR / 'dummy_model'):
+    shutil.rmtree(TEST_DIR / 'dummy_model')
+if Path.exists(TEST_DIR / 'Validation'):
+    shutil.rmtree(TEST_DIR / 'Validation')
 
 # Make a model to use for validation
 dummy_hyperparameters = {'epochs': 1,
@@ -24,12 +29,13 @@ train_model(dataset_path='coco8-seg.yaml',
             save_name='dummy_model',
             model_architecture='yolo11n-seg')
 
+WEIGHTS_PATH = TEST_DIR / 'dummy_model' / 'weights'
 
 class MyTestCase(unittest.TestCase):
-    """Class to test validation functions"""
+    """Class to test validation functions."""
+
     def test_validation(self):
-        """Checks that the validation metrics are consistent for
-         a same model and validation set"""
+        """Checks that the validation metrics are consistent."""
         test_validation = validate_model(model_path=WEIGHTS_PATH / 'best.pt',
                                          save_path=TEST_DIR / 'Validation',
                                          save_name='test_validation',

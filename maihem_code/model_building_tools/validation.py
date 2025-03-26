@@ -1,11 +1,15 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""A function to obtain validation metrics for the trained model"""
+"""Obtain validation metrics for the trained model."""
 from ultralytics import YOLO
 
 
 def validate_model(model_path, save_path, save_name, save_tf):
-    """Runs validation on the previously trained model and outputs metrics
+    """Validate the model.
+
+    Description
+    -----------
+    Run validation on the previously trained model and output metrics.
     Only the path to the trained model is needed, other args are remembered.
     For now, default validation metrics are used
 
@@ -27,7 +31,6 @@ def validate_model(model_path, save_path, save_name, save_tf):
         for both boxes and segmentation at various intersection over
          union (IoU) thresholds.
     """
-
     model = YOLO(model_path)
 
     validation = model.val(

@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Binaries to run the program from the input file"""
+"""Binaries to run the program from the input file."""
 
 import argparse
 import datetime
@@ -11,8 +11,7 @@ _DATE_FORMAT = '%d.%m.%Y %H:%M:%S'
 
 
 def hello_world():
-    """Function to greet the user and output the time the program starts
-     and python version"""
+    """Greet the user, output program start time and python version."""
     timestart = datetime.datetime.now().strftime(_DATE_FORMAT)
     pyversion = sys.version.split()[0]
     print(f'Start of execution: {timestart}')
@@ -20,7 +19,7 @@ def hello_world():
 
 
 def parse_input_file():
-    """Function to parse the input file, if specified"""
+    """Parse the input file, if specified."""
     parser = argparse.ArgumentParser()
     parser.add_argument('-i', '--input',
                         help='Location of maihem input file',
@@ -32,16 +31,19 @@ def parse_input_file():
 
 
 def bye_world():
-    """Function to output the end time of execution and
-     signal the end of the run"""
+    """Output the end time of execution and signal the end of the run."""
     timeend = datetime.datetime.now().strftime(_DATE_FORMAT)
     print(f'End of maihem execution: {timeend}')
 
 
 def entry_point():
-    """The entry point function that checks if an input file has been provided,
-    and if so, runs the maihem program.
-    Also greets the user before and after the run"""
+    """Perform entry point function.
+
+    Description
+    -----------
+    Checks if an input file has been provided, and if so,
+    runs the maihem program. Also greets the user before and after the run.
+    """
     hello_world()
     input_file = parse_input_file()
     if input_file:

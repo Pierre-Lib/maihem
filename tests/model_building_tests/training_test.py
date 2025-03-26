@@ -1,18 +1,24 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Tests for the training function"""
+"""Tests for the training function."""
 
 import unittest
 import shutil
+from pathlib import Path
 
 from maihem_code.model_building_tools.training import train_model
 
+THIS_DIR = Path(__file__).parent
+
+# Remove any vestigial folders that might mess up the tests
+if Path.exists(THIS_DIR / 'test_model'):
+    shutil.rmtree(THIS_DIR / 'test_model')
 
 class MyTestCase(unittest.TestCase):
-    """Class to test the training function"""
+    """Class to test the training function."""
+
     def test_training(self):
-        """Tests that the train_model function works consistently when given
-        the same hyperparameters and seed."""
+        """Test that the train_model function works consistently."""
         test_hyperparameters = {'epochs': 10,
                                 'batch_size': 16,
                                 'image_size': 640,
