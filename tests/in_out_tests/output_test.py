@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """Tests the output function"""
 
 import unittest

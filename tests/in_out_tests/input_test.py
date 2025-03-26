@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """Tests the functions in the input class"""
 
 import unittest

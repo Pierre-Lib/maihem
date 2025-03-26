@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A file to run the examples from maihem package."""
 
 from pathlib import Path

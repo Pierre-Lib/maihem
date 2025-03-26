@@ -1,6 +1,9 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A class to perform the various actions from the instruction file and
  run the program"""
 
+import json
 from maihem_code.in_out.input import Input
 from maihem_code.backbone.run_functions import (model_training_and_validation,
                                                 detections_and_calculations)
@@ -96,6 +99,7 @@ class Runner:
 
     def execute_training(self):
         """If there are training instructions, runs the training functions
+        Also saves the complete training instructions used to a JSON file
 
         Returns
         -------
@@ -110,10 +114,19 @@ class Runner:
         training_summary = model_training_and_validation(
             self.instructions['Train']
         )
+        # save the parameters used for training to a JSON file
+        save_path = self.instructions['Train']['settings']['model_path']
+        save_name = self.instructions['Train']['settings']['model_name']
+        with open(f'{save_path}/{save_name}/complete_training_parameters.json',
+                  'w', encoding='utf-8') as outfile:
+            json.dump(self.instructions['Train'], outfile, indent=4)
+        print(f"Parameters actually used for the training saved at"
+              f"{save_path}/{save_name}/complete_training_parameters.json")
         return training_summary
 
     def execute_usage(self):
         """If there are usage instructions, runs the usage functions
+        Also saves the complete usage instructions used to a JSON file
 
         Returns
         -------
@@ -127,4 +140,11 @@ class Runner:
         usage_measures = detections_and_calculations(
             self.instructions['Usage']
         )
+        # save the parameters used for detections to a JSON file
+        save_path = self.instructions['Usage']['settings']['output_path']
+        with open(f'{save_path}/predict/complete_usage_parameters.json',
+                  'w', encoding='utf-8') as outfile:
+            json.dump(self.instructions['Usage'], outfile, indent=4)
+        print(f"Parameters actually used for the training saved at"
+              f"{save_path}/predict/complete_usage_parameters.json")
         return usage_measures

@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """Tests for the package backbone"""
 
 import unittest

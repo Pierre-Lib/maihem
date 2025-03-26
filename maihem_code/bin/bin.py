@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """Binaries to run the program from the input file"""
 
 import argparse

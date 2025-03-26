@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A function training a YOLO11 segmentation model """
 
 from ultralytics import YOLO

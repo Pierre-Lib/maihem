@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A function which uses the trained model to detect objects in a new image
 and creates a file with segmentation data for further quantitative analysis"""
 

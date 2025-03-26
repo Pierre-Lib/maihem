@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A class to take inputs from a file and format them for use by
  the functions in the package"""
 

@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A class which takes raw segmentation results and calculates measures"""
 import yaml
 import cv2

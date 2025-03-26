@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """A function to obtain validation metrics for the trained model"""
 from ultralytics import YOLO
 

@@ -1,3 +1,5 @@
+# Copyright (c) 2025, Fish Maihem Development
+# Distributed under MIT license
 """Two functions for use of YOLO models in  environmental histopathology"""
 import json
 from maihem_code.in_out.output import merge_detection_measures
