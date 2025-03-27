@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Tests for the measurement calculations"""
+"""Tests for the measurement calculations."""
 import unittest
 import shutil
 from pathlib import Path
@@ -35,6 +35,7 @@ shutil.rmtree(THIS_DIR / 'test_predictions')
 
 class MyTestCase(unittest.TestCase):
     """Class to test measurement calculation functions."""
+
     def test_init(self):
         """Check that the detection results loaded correctly in the class."""
         self.assertEqual(len(test_metrics.detections[0]), 3)

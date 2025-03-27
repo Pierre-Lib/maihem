@@ -1,6 +1,6 @@
 # Copyright (c) 2025, Fish Maihem Development
 # Distributed under MIT license
-"""Tests for the package backbone"""
+"""Tests for the package backbone."""
 
 import unittest
 import shutil
@@ -60,11 +60,11 @@ class MyTestCase(unittest.TestCase):
     def test_training_and_validation(self):
         """Test the training and validation function.
 
-         Description
-         -----------
-         Check that the validation metrics are as expected
-         for a specific model training.
-         """
+        Description
+        -----------
+        Check that the validation metrics are as expected
+        for a specific model training.
+        """
         test_bin_metrics = model_training_and_validation(training_instructions)
         expected_map50_box = 0.9407706548068574
         expected_map75_seg = 0.5277204962825915
