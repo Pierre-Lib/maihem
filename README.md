@@ -61,6 +61,9 @@ except those with the value "user_input_necessary" in the template file. You can
 forgo the "Train" or "Usage" part of the input file to use only one aspect of the package
 (as illustrated in example input files 2 and 3).
 
+Once the input file is ready, with the package installed it can be ran from the command line using:  
+maihem -i path_to_input_file
+
 Results are saved either as specified in the input file, or directly in the current 
 working directory if unspecified.  
 Training results include the trained model (.pt format, in the weights folder, includes both the

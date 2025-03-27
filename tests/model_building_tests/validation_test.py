@@ -31,6 +31,7 @@ train_model(dataset_path='coco8-seg.yaml',
 
 WEIGHTS_PATH = TEST_DIR / 'dummy_model' / 'weights'
 
+
 class MyTestCase(unittest.TestCase):
     """Class to test validation functions."""
 

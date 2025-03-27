@@ -14,6 +14,7 @@ TESTS_DIR = THIS_DIR.parent
 if Path.exists(THIS_DIR / 'test_predictions'):
     shutil.rmtree(THIS_DIR / 'test_predictions')
 
+
 class MyTestCase(unittest.TestCase):
     """Class to test detection functions."""
 

@@ -64,7 +64,8 @@ class MyTestCase(unittest.TestCase):
         example_yaml_file = TESTS_DIR / 'coco8-seg_test.yaml'
         Input.check_lesion_names(example_lesion_names, example_yaml_file)
         not_a_lesion = ['ferret']
-        self.assertRaises(ValueError, Input.check_lesion_names, not_a_lesion, example_yaml_file)
+        self.assertRaises(ValueError, Input.check_lesion_names,
+                          not_a_lesion, example_yaml_file)
 
     def test_format_training_instructions(self):
         """Test if the training instructions get formatted correctly."""

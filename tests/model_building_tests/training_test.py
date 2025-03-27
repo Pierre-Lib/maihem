@@ -14,6 +14,7 @@ THIS_DIR = Path(__file__).parent
 if Path.exists(THIS_DIR / 'test_model'):
     shutil.rmtree(THIS_DIR / 'test_model')
 
+
 class MyTestCase(unittest.TestCase):
     """Class to test the training function."""
 
