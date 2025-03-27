@@ -1,0 +1,36 @@
+{
+  "Train": {
+    "dataset": "user_input_necessary",
+    "settings": {
+      "model_architecture": "yolo11n-seg",
+      "model_path": ".",
+      "model_name": "model_created_{current_date_time}",
+      "validation_name": "validation",
+      "save_validation": true
+    },
+    "hyperparameters": {
+      "epochs": 100,
+      "batch_size": 16,
+      "image_size": 640,
+      "device": "cpu",
+      "seed": "{random_seed_between_0_and_1000}"
+    }
+  },
+  "Usage": {
+    "dataset": "user_input_necessary",
+    "settings": {
+      "model_path": "user_input_necessary",
+      "yaml_path": "user_input_necessary",
+      "output_path": ".",
+      "save_output": true
+    },
+    "parameters": {
+      "confidence_threshold": 0.5,
+      "pixel_size": 1,
+      "lesion_names": [
+        "user_input_necessary",
+        "user_input2_necessary"
+      ]
+    }
+  }
+}

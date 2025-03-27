@@ -48,6 +48,26 @@ OR
 cd example  
 python maihem_example.py
 
-Quick user guide
+Example results will be saved in the example folder, but removed if the example script is
+executed again to avoid build-up.
+
+Quick start guide
 ----------------
-For use 
+Only an input file (JSON format) is needed for use. Maihem can run
+either training and validation or detection and segmentation, or both sequentially.  
+Make sure the input file is formatted correctly; a template input file
+is provided with the package. Note that default values are provided for all parameters
+except those with the value "user_input_necessary" in the template file. You can entirely
+forgo the "Train" or "Usage" part of the input file to use only one aspect of the package
+(as illustrated in example input files 2 and 3).
+
+Results are saved either as specified in the input file, or directly in the current 
+working directory if unspecified.  
+Training results include the trained model (.pt format, in the weights folder, includes both the
+best and last models trained); a JSON file showing the exact training parameters used;
+and validation metrics and graphs.  
+Usage results include a JSON file showing the exact usage parameters used;
+a JSON file with all detections found in the images along with bounding box and
+segmentation coordinates; a JSON file with the measures (number of detected lesions and total area)
+of specified lesions for each image); and images showing the segmented areas, assigned lesion names
+and confidence of detections.
