@@ -6,7 +6,7 @@ A python package using YOLO11 segmentation models to detect and quantify lesions
 especially for use in environmental research and monitoring. The package covers both training and
 usage of trained models, and allows simultaneous targeting and quantification of multiple lesions. This works builds
 on Liboureau et al. 2025 (under review).  
-Please see "Quick user guide" further in this file for more information on usage.
+Please see "Quick start guide" further in this file for more information on usage.
 
 Installation:
 ----------------------------------------------------------------
