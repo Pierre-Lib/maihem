@@ -4,7 +4,78 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches" />
+    <list default="true" id="6139c004-baa1-4315-8a1b-c4549b0982ad" name="Changes" comment="Finishing touches">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/coco8-seg.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/coco8-seg.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/train/000000000009.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/train/000000000009.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/train/000000000025.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/train/000000000025.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/train/000000000030.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/train/000000000030.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/train/000000000034.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/train/000000000034.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/val/000000000036.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/val/000000000036.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/val/000000000042.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/val/000000000042.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/val/000000000049.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/val/000000000049.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/images/val/000000000061.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/images/val/000000000061.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/train.cache" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/train.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/train/000000000009.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/train/000000000009.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/train/000000000025.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/train/000000000025.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/train/000000000030.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/train/000000000030.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/train/000000000034.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/train/000000000034.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/val.cache" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/val.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/val/000000000036.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/val/000000000036.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/val/000000000042.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/val/000000000042.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/val/000000000049.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/val/000000000049.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/datasets/coco8-seg/labels/val/000000000061.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/datasets/coco8-seg/labels/val/000000000061.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_2_input.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_2_input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_3_input.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_3_input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_4_input.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_4_input.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/BoxF1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/BoxF1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/BoxPR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/BoxPR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/BoxP_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/BoxP_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/BoxR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/BoxR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/MaskF1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/MaskF1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/MaskPR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/MaskPR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/MaskP_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/MaskP_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/MaskR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/MaskR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/BoxF1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/BoxF1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/BoxPR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/BoxPR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/BoxP_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/BoxP_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/BoxR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/BoxR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/MaskF1_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/MaskF1_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/MaskPR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/MaskPR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/MaskP_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/MaskP_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/MaskR_curve.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/MaskR_curve.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/predictions.json" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/predictions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/Validation/test_validation/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/Validation/test_validation/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/args.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/args.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/confusion_matrix.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/confusion_matrix.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/confusion_matrix_normalized.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/confusion_matrix_normalized.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/labels_correlogram.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/labels_correlogram.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/results.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/results.png" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/results.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/train_batch0.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/train_batch0.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/train_batch1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/train_batch1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/train_batch2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/train_batch2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/val_batch0_labels.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/val_batch0_labels.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/val_batch0_pred.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/val_batch0_pred.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/weights/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/weights/best.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_model/weights/last.pt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_model/weights/last.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_pictures/cats_dogs_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_pictures/cats_dogs_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_pictures/cats_dogs_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_pictures/cats_dogs_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_pictures/cats_dogs_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_pictures/cats_dogs_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_pictures/image_sources.txt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_pictures/image_sources.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/example_pictures/not_cats_dogs.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/examples/example_pictures/not_cats_dogs.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/maihem_example.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maihem_example.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/maihem_example.sh" beforeDir="false" afterPath="$PROJECT_DIR$/examples/maihem_example.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/yolo11n-seg.pt" beforeDir="false" afterPath="$PROJECT_DIR$/examples/yolo11n-seg.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/maihem_code/in_out/input.py" beforeDir="false" afterPath="$PROJECT_DIR$/maihem_code/in_out/input.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,15 +176,8 @@
       <workItem from="1742412739519" duration="42000" />
       <workItem from="1742453223292" duration="9308000" />
       <workItem from="1742562210990" duration="21078000" />
-      <workItem from="1743057333972" duration="318000" />
-    </task>
-    <task id="LOCAL-00009" summary="new_package">
-      <option name="closed" value="true" />
-      <created>1737639358944</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1737639358944</updated>
+      <workItem from="1743057333972" duration="481000" />
+      <workItem from="1743166734003" duration="3536000" />
     </task>
     <task id="LOCAL-00010" summary="new_package">
       <option name="closed" value="true" />
@@ -499,7 +563,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743057598421</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Finishing touches">
+      <option name="closed" value="true" />
+      <created>1743057809175</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1743057809175</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

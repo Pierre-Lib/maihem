@@ -6,7 +6,7 @@ from pathlib import Path
 import shutil
 from maihem_code.core.main import maihem_main
 
-# Gets the path to the example directory
+# Gets the path to the examples directory
 PATH_TO_HERE = Path(__file__).parent
 
 # Remove all folders with previous results to avoid confusion and buildup
@@ -16,7 +16,7 @@ if Path.exists(PATH_TO_HERE / 'predict'):
     shutil.rmtree('predict')
 
 # Ask user for input to select the example version
-print("Select which example to run (1-4):")
+print("Select which examples to run (1-4):")
 print("1) No input, only checking if the binaries work")
 print("2) Training only, input: example_2_input.json")
 print("3) Usage only, input: example_3_input.json")

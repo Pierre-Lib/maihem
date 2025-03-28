@@ -113,8 +113,8 @@ class Input:
         default_settings = {'model_architecture': 'yolo11n-seg',
                             'model_path': '.',
                             'model_name': f'model_created_'
-                                          f'{datetime.datetime.now().
-                                             strftime("%Y_%m_%d_%H_%M_%S")}',
+                                          f'{datetime.datetime.now().strftime(
+                                              "%Y_%m_%d_%H_%M_%S")}',
                             'validation_name': 'validation',
                             'save_validation': True
                             }

@@ -2,7 +2,7 @@ MAIHEM - Machine-Automated Identification of Histological lesions for Environmen
 ==============================================================================================
 Introduction
 ------------
-A python package using YOLO11 segmentation models to detect and quantify lesions in whole-slides images (WSI),
+A python package using YOLO11 (https://docs.ultralytics.com/models/yolo11/) segmentation models to detect and quantify lesions in whole-slides images (WSI),
 especially for use in environmental research and monitoring. The package covers both training and
 usage of trained models, and allows simultaneous targeting and quantification of multiple lesions. This works builds
 on Liboureau et al. 2025 (under review).  
